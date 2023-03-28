@@ -1,0 +1,27 @@
+@import url("./reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Noto+Sans+KR:wght@300&display=swap");
+
+a, li, div, span, button {
+    font-family: "Noto Sans KR", sans-serif; /* 한글용 폰트 */
+}
+
+.english_font {
+    font-family: "Montserrat", sans-serif; /* 영어용 폰트 */
+}
+
+@media all{
+    .wrap{
+        width:80%;
+        max-width: 960px;
+        margin: auto;
+        margin-top: 20px;
+    }
+}
+@media all and (min-width:768px) and (max-width:1024px){
+}
+@media all and (max-width:768px){
+    .wrap{
+        width: 100%;
+        margin: 10px;
+    }
+}

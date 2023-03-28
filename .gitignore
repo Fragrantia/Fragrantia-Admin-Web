@@ -1,0 +1,21 @@
+# 디폴트 무시된 파일
+/shelf/
+/workspace.xml
+# 에디터 기반 HTTP 클라이언트 요청
+/httpRequests/
+.idea/**
+
+#vs code workspace 설정
+/.vscode
+#scss 사용
+/scss
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+#node.js 모듈&플러그인 파일
+package.json
+yarn.lock
+/node_modules
+gulpfile.babel.js
