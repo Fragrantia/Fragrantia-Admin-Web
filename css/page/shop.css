@@ -1,0 +1,122 @@
+.but {
+    width: 95%;
+    text-align: end;
+    display: flex;
+
+}
+
+.but i{
+    padding: 5px;
+
+}
+
+#shop table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 900px;
+    margin: 50px auto 0 auto;
+    background-color: #fff;
+    table-layout: auto;
+}
+
+button:hover{
+    background-color: black;
+}
+
+#shop th,
+#shop td {
+    padding: 10px;
+    text-align: center;
+}
+
+#shop th {
+    background-color: #eee;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.shop-header:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#shop .shop-content {
+    display: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#shop .shop-content .content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+}
+
+#shop .shop-content h1 {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#shop .shop-content p {
+    font-size: 14px;
+}
+
+#shop .shop-content img{
+    width: 150px;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    width: 100%;
+}
+
+.pagination ul {
+    display: flex;  
+}
+
+.pagination li {
+    margin: 0 10px;
+}
+
+.pagination li a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: #333;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.pagination li a:hover,
+.pagination li a.active {
+    background-color: #333;
+    color: #fff;
+}
+
+.pagination .page_select {
+    background-color: #333;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    #shop table {
+        table-layout: fixed;
+    }
+
+    #shop td.tel {
+        width: auto;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .tel {
+        display: none;
+    }
+
+    .pagination ul {
+        font-size: 70%;
+    }
+}
