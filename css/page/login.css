@@ -87,7 +87,9 @@
 }
 
 .link-box a:hover {
+    font-weight: bold;
     color: grey;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
