@@ -1,6 +1,6 @@
 
 
-.login-box {
+.join-box {
     width: 70%;
     max-width: 600px;
     margin: 0 auto;
@@ -12,7 +12,7 @@
     border-radius: 10px;
 }
 
-.login-box h2 {
+.join-box h2 {
     text-align: center;
     margin-bottom: 30px;
     font-size: 30px;
@@ -87,17 +87,15 @@
 }
 
 .link-box a:hover {
-    font-weight: bold;
     color: grey;
-    cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
-    .login-box {
+    .join-box {
         width: 90%;
     }
 
-    .login-box h2 {
+    .join-box h2 {
         font-size: 24px;
     }
 
