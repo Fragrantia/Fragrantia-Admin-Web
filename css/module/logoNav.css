@@ -1,0 +1,23 @@
+.logo-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.logo-img {
+    width: 400px;
+    height: 200px;
+}
+
+.logo-img:hover {
+    cursor: pointer;
+    width: 600px;
+    height: 200px;
+    transition: all 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 425px) {
+    .logo-nav {
+        margin-top: 10px;
+    }
+}
