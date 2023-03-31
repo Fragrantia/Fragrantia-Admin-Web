@@ -1,44 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Login</title>
+    <title>Find Account</title>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../../css/page/login.css">
+    <link rel="stylesheet" href="../../css/page/findAccount.css">
     <link href="../../css/global.css" rel="stylesheet">
     <link href="../../css/reset.css" rel="stylesheet">
 
     <script src="../../js/jquery.min.js"></script>
     <script src="../../js/pageModuleSetting.js"></script>
-    <script src="../../js/login.js"></script>
+    <script src="../../js/findAccount.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
 </head>
 <body>
 <div id="logoNav"></div>
-<div class="login-box">
-    <h2>LOGIN</h2>
-    <form id="login-form">
+<div class="find-account-box">
+    <h2>Find Account</h2>
+    <form id="find-account-form">
         <div class="user-box">
-            <input type="text" name="id" required="">
-            <label class="box-label">ID</label>
+            <input type="text" name="name" required="">
+            <label class="box-label">Name</label>
         </div>
         <span class="error-message"></span>
 
         <div class="user-box">
-            <input type="password" name="password" required="">
-            <label  class="box-label">Password</label>
+            <input type="email" name="email" required="">
+            <label class="box-label">E-Mail</label>
         </div>
         <span class="error-message"></span>
 
-        <div class="link-box">
-            <a href="join.html">Join Account</a>
-            <a href="findAccount.html">Find Account</a>
+        <div class="user-box">
+            <input type="text" name="branch" required="">
+            <label class="box-label">Branch</label>
         </div>
+        <span class="error-message"></span>
 
         <div class="submit-box">
-            <input type="submit" value="Login">
+            <input type="submit" value="Request">
         </div>
     </form>
 </div>
