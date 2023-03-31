@@ -9,6 +9,9 @@
     padding: 5px;
 
 }
+input{
+    all:revert;
+}
 
 #shop table {
     border-collapse: collapse;
@@ -19,16 +22,12 @@
     table-layout: auto;
 }
 
-button:hover{
-    background-color: black;
-}
-
 #shop th,
 #shop td {
     padding: 10px;
     text-align: center;
 }
-
+#shop td.title
 #shop th {
     background-color: #eee;
     font-weight: bold;
@@ -38,6 +37,7 @@ button:hover{
 .shop-header:hover {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
+
 
 #shop .shop-content {
     display: none;
@@ -64,6 +64,9 @@ button:hover{
 
 #shop .shop-content img{
     width: 150px;
+}
+#shop .shop-content .imgbox{
+    height: 100%;
 }
 .pagination {
     display: flex;
@@ -105,14 +108,15 @@ button:hover{
         table-layout: fixed;
     }
 
-    #shop td.tel {
+
+    #shop td.title {
         width: auto;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
 
-    .tel {
+    .tel, .addr {
         display: none;
     }
 
