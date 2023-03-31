@@ -23,6 +23,9 @@ $(document).ready(function () {
         content.fadeToggle('slow'); // 클릭한 요소 열기/닫기
         $('.shop-content').not(content).fadeOut(); // 이미 열려있는 요소 닫기
     });
+    $('input[type="checkbox"]').click(function(event) {
+        event.stopPropagation(); // 클릭 이벤트 전파 방지
+    });
 
     //시작 할때 colspan 화면 크기에 맞게 설정
     reColspan()
