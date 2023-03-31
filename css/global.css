@@ -1,14 +1,20 @@
 @import url("./reset.css");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Noto+Sans+KR:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap&subset=korean");
+/* latin */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr6Hw5aXo.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
 
-a, li, div, span, button {
-    font-family: "Noto Sans KR", sans-serif; /* 한글용 폰트 */
+a, li, div, span, button, p, h1 {
+    font-family: "Montserrat", "Noto Sans KR",sans-serif; /* 한글용 폰트 */
 }
-
-.english_font {
-    font-family: "Montserrat", sans-serif; /* 영어용 폰트 */
+*{
+    box-sizing: border-box;
 }
-
 @media all{
     .wrap{
         width:80%;
@@ -21,7 +27,7 @@ a, li, div, span, button {
 }
 @media all and (max-width:768px){
     .wrap{
-        width: 100%;
+        width: calc(100% - 20px); /*margin을 포함해서 100% 계산*/
         margin: 10px;
     }
 }
