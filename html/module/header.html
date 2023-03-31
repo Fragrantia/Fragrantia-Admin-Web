@@ -1,16 +1,31 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
 
-  <!-- 외부 스타일시트(전역 <- 리셋포함) -->
-  <link rel="stylesheet" href="../../css/reset.css">
-  <link rel="stylesheet" href="../../css/global.css">
-  <link rel="stylesheet" href="../../css/module/header.css">
 
-  <!-- 외부 스크립트 (자바스크립트, jQuery) -->
-  <script src="../../js/jquery.min.js"></script> <!-- 제이쿼리 프로그램 연결(기본) -->
-</head>
-<body>
-</body>
-</html>
+<script src="../../js/headerToggle.js"></script> <!-- 제이쿼리 프로그램 연결(토글) -->
+<!-- =============================================== -->
+<!-- 나중에 html로 불러갈 때에는 html 문서의 모듈과 중복되니 빼고 커밋할 것!! -->
+<script src="../../js/jquery.min.js"></script>
+
+<link rel="stylesheet" href="../../css/global.css">
+<link rel="stylesheet" href="../../css/module/header.css">
+<!-- =============================================== -->
+
+
+<div class="header cfixed">
+    <nav>
+      <ul class="main_nav">
+        <li><a class="english_font" href="#">통계</a></li>
+        <li><a class="english_font" href="#">공지사항 관리</a></li>
+        <li><a class="english_font" href="#">상품 관리</a></li>
+        <li><a class="english_font" href="#">매장 관리</a></li>
+        <li><a class="english_font" href="#">고객센터 관리</a></li>
+      </ul>
+    </nav>
+    <span class="menu-toggle-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div class="logo"> <!-- 스토리보드 수정 필요 >> 변경 전 : admin_header, 변경 후 : admin_logo -->
+        <a href="../page/index.html"><img src="../../images/adminLogo.png" alt="로고 이미지"></a>
+    </div>
+</div>
