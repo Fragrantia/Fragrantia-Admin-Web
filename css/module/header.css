@@ -1,0 +1,74 @@
+/* ===== 헤더 전체 ===== */
+.header{
+  position: relative; /* 메인 네비에 absolute 쓰기 위함 */
+  width: 100%;
+  height: 60px;
+}
+.cfixed::after { /* 가상 클래스 이용하여 자식요소들 크기의 합이 부모요소 이상으로 설정되면 사라지게 하는 역할 */
+  display: block;
+  content: "";
+  clear: both;
+}
+/* == 메인 네비 부분 == */
+.header ul.main_nav{
+  display:none;
+  position:absolute;
+  top:100%;
+  left:0;
+  width:20%;
+  z-index: 99;
+  background: rgba(255, 255, 255, 0.75);
+}
+.header ul.main_nav>li>a{
+  display:block;
+  padding:14px 0 14px 5%;
+  margin-left: 10px;
+  font-size:1.2rem;
+  color: black;
+}
+.header ul.main_nav>li>a:hover {
+  color: rgb(92, 92, 92);
+}
+/* == 토글 버튼 부분 == */
+.header>span.menu-toggle-btn{
+  float:left;
+  width:20px;
+  margin-top: 20px;
+  margin-left: 22px;
+  cursor:pointer;
+}
+.header>span.menu-toggle-btn>span{
+  display: block;
+  width: 100%;
+  height: 2px;
+  border-radius: 5px;
+  background: rgb(82, 82, 82);
+}
+.header>span.menu-toggle-btn>span:nth-child(2){
+  margin: 6px 0;
+}
+/* == logo가 올 부분 == */
+div.logo {
+  width: 150px;
+  position: absolute;
+  left: 50%;
+  margin-left: -70px;
+}
+div.logo>a {
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+}
+div.logo>a>img {
+  float: left;
+  width: 100%;
+  height: 56px;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  /* == 메인 네비 부분 == */
+  .header ul.main_nav {
+    width: 50%;
+  }
+}
