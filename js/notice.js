@@ -3,14 +3,14 @@ let reColspan = function () {
     if ($(window).width() <= 768) {
         // colspan 속성이 6인 td 요소를 찾아서
         $("tr.notice-content td[colspan='6']").each(function () {
-            // colspan 속성 값을 3으로 변경
-            $(this).attr("colspan", "3");
+            // colspan 속성 값을 4으로 변경
+            $(this).attr("colspan", "4");
         });
     }
     // 데스크탑 버전인 경우
     else {
-        // colspan 속성이 3인 td 요소를 찾아서
-        $("tr.notice-content td[colspan='3']").each(function () {
+        // colspan 속성이 4인 td 요소를 찾아서
+        $("tr.notice-content td[colspan='4']").each(function () {
             // colspan 속성 값을 6으로 변경
             $(this).attr("colspan", "6");
         });
