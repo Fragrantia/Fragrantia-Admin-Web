@@ -1,0 +1,64 @@
+@import url("https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css");
+.wrap .chart label.chartLabelInput {
+  display: block;
+  padding-left: 5px;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #1a3b5d;
+  user-select: none;
+}
+.wrap .chart input.chartInput {
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+.wrap .row {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.wrap .searchChartWrap {
+  width: 60%;
+}
+.wrap .tableContainer {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.wrap .tableContainer .tableh1 {
+  margin-bottom: 2rem;
+  width: 100%;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.wrap .table {
+  width: 100%;
+}
+.wrap .table div.gridjs.gridjs-container {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.wrap .table div.gridjs.gridjs-container div.gridjs-wrapper table.gridjs-table {
+  margin: auto;
+  overflow: hidden;
+  border-collapse: collapse;
+}
+.wrap .table div.gridjs.gridjs-container div.gridjs-wrapper table.gridjs-table thead.gridjs-thead tr.gridjs-tr {
+  border-top: 1px solid #d8d8d8;
+  border-bottom: 1px grey solid;
+}
+.wrap .table div.gridjs.gridjs-container div.gridjs-wrapper table.gridjs-table thead.gridjs-thead tr.gridjs-tr th.gridjs-th div.gridjs-th-content {
+  padding: 6px 24px;
+  font-weight: bold;
+}
+.wrap .table div.gridjs.gridjs-container div.gridjs-wrapper table.gridjs-table tbody.gridjs-tbody {
+  border-bottom: 1px solid #d8d8d8;
+}
+.wrap .table div.gridjs.gridjs-container div.gridjs-wrapper table.gridjs-table tbody.gridjs-tbody tr.gridjs-tr:hover {
+  background-color: powderblue;
+}
+.wrap .table div.gridjs.gridjs-container div.gridjs-wrapper table.gridjs-table tbody.gridjs-tbody tr.gridjs-tr td.gridjs-td {
+  padding: 6px 24px;
+}
