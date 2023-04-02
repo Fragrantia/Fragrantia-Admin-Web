@@ -1,14 +1,3 @@
-.but {
-    width: 95%;
-    text-align: end;
-    display: flex;
-
-}
-
-.but i{
-    padding: 5px;
-
-}
 input{
     all:revert;
 }
@@ -16,8 +5,7 @@ input{
 #shop table {
     border-collapse: collapse;
     width: 100%;
-    max-width: 900px;
-    margin: 50px auto 0 auto;
+    margin: 10px auto 0 auto;
     background-color: #fff;
     table-layout: auto;
 }
@@ -27,7 +15,7 @@ input{
     padding: 10px;
     text-align: center;
 }
-#shop td.title
+
 #shop th {
     background-color: #eee;
     font-weight: bold;
@@ -116,10 +104,15 @@ input{
         text-overflow: ellipsis;
     }
 
-    .tel, .addr {
+    .addr {
         display: none;
     }
-
+    #shop .shop-content .content{
+        display: block;
+    }
+    .br_m{
+        display: none;
+    }
     .pagination ul {
         font-size: 70%;
     }
