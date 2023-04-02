@@ -2,7 +2,7 @@
 let reColspan = function () {
     if ($(window).width() <= 768) {
         // colspan 속성이 6인 td 요소를 찾아서
-        $("tr.notice-content td[colspan='6']").each(function () {
+        $("tr.customerService-content td[colspan='6']").each(function () {
             // colspan 속성 값을 4으로 변경
             $(this).attr("colspan", "4");
         });
@@ -10,7 +10,7 @@ let reColspan = function () {
     // 데스크탑 버전인 경우
     else {
         // colspan 속성이 4인 td 요소를 찾아서
-        $("tr.notice-content td[colspan='4']").each(function () {
+        $("tr.customerService-content td[colspan='4']").each(function () {
             // colspan 속성 값을 6으로 변경
             $(this).attr("colspan", "6");
         });
@@ -18,10 +18,10 @@ let reColspan = function () {
 }
 
 $(document).ready(function () {
-    $('.notice-header').click(function () {
-        var content = $(this).closest('tr').next('.notice-content');
+    $('.customerService-header').click(function () {
+        var content = $(this).closest('tr').next('.customerService-content');
         content.fadeToggle('slow'); // 클릭한 요소 열기/닫기
-        $('.notice-content').not(content).fadeOut(); // 이미 열려있는 요소 닫기
+        $('.customerService-content').not(content).fadeOut(); // 이미 열려있는 요소 닫기
     });
     $('input[type="checkbox"]').click(function(event) {
       event.stopPropagation(); // 클릭 이벤트 전파 방지

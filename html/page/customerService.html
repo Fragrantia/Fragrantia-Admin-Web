@@ -2,7 +2,7 @@
 <html lang="ko">
 
 <head>
-  <title>Notice</title>
+  <title>Customer Service</title>
 
   <!-- meta Setting -->
   <meta charset="UTF-8">
@@ -10,21 +10,26 @@
 
   <!-- 외부 스타일시트(전역 <- 리셋포함) -->
   <link href="../../css/global.css" rel="stylesheet">
-  <link rel="stylesheet" href="../../css/page/notice.css">
+  <link rel="stylesheet" href="../../css/page/customerService.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
   <!-- 외부 스크립트 (자바스크립트, jQuery) -->
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a1d04a27c7e45b8a44999bc8a7a55a62"></script>
   <script src="../../js/jquery.min.js"></script>
   <script src="../../js/pageModuleSetting.js"></script>
-  <script src="../../js/notice.js"></script>
+  <script src="../../js/customerService.js"></script>
 </head>
 
 <body>
   <div id="header"></div>
-  <div id="buttonNav"></div>
-
-  <div id="notice" class="wrap">
+  <div class="select_box">
+    <select id="category" name="customerService_category_select">
+      <option>꽃</option>
+      <option>향수</option>
+      <option>판매자</option>
+    </select>
+  </div>
+  <div id="customerService" class="wrap">
     <!-- 테이블 영역 -->
     <table>
 
@@ -44,7 +49,7 @@
       <tbody>
 
         <!-- 요약 내용 영역 -->
-        <tr class="notice-header">
+        <tr class="customerService-header">
           <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
           <td class="no">1</td>
           <td class="title">이번에 새롭게 출시한 꽃 메뉴들을 소개합니다.</td>
@@ -52,21 +57,23 @@
           <td class="date">23.03.27</td>
           <td class="view">1352</td>
         </tr>
-
+        <!-- label 'for' 속성 값은 연결하고자 하는 폼 컨트롤의 id 값과 동일해야 함. -->
         <!-- 본문 영역 -->
-        <tr class="notice-content">
+        <tr class="customerService-content">
           <td colspan="6">
             <div class="content">
-              <h1>이번에 새롭게 출시한 꽃 메뉴들을 소개합니다.</h1>
-              <p>
-                당사의 꽃 메뉴들은 신선한 꽃들을 사용하여, 시각적으로도 아름답고 색다른 맛과 향을 제공합니다. 또한, 꽃들이 지닌 건강한 성분을 적극 활용하여, 건강한 식습관을 유지하는
-                데 도움이 되기도 합니다.
-                <br />
-                당사의 꽃 메뉴들은, 꽃들의 종류와 특성을 고려하여 정성스럽게 조리됩니다. 예를 들어, 라벤더를 사용한 음료는 진한 보라색으로, 상큼하고 달콤한 맛과 함께, 라벤더의 진한
-                향이 느껴집니다. 또한, 국내산 유기농 꽃들을 사용하여 첨가물 없이 깨끗하게 만들어진 꽃 차는 편안하고 여유로운 시간을 보낼 때 최적의 선택입니다.
-                <br />
-                꽃에 대한 새로운 시도와 함께, 우리의 새로운 꽃 메뉴들은 건강하면서도 맛있는 요리를 제공합니다. 곧 방문하시어, 꽃 메뉴들의 다양한 맛과 향을 즐겨보세요!
-              </p>
+              <h1>이번에 구매한 꽃에 대해서 문의드릴 게 있습니다.</h1>
+              <label for="ask_name">Name</label>
+              <input type="text" name="ask_name" id="ask_name"><br/>
+
+              <label for="ask_price">Price</label>
+              <input type="text" name="ask_price" id="ask_price"><br/>
+
+              <label for="ask_detail">Detail</label>
+              <input type="text" name="ask_detail" id="ask_detail"><br/>
+
+              <label for="ask_file">File</label>
+              <input type="text" name="ask_file" id="ask_file"><br/>
             </div>
             <div class="content_btn">
               <button type="button" class="btn btn-dark">수정</button>
@@ -75,17 +82,17 @@
         </tr>
 
         <!-- 요약 내용 영역 -->
-        <tr class="notice-header">
+        <tr class="customerService-header">
           <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
           <td class="no">2</td>
-          <td class="title" class="title">이번에 새롭게 출시한 향수 메뉴들을 소개합니다.</td>
+          <td class="title">이번에 새롭게 출시한 향수 메뉴들을 소개합니다.</td>
           <td class="admin">Roy</td>
           <td class="date">23.03.27</td>
           <td class="view">200</td>
         </tr>
 
         <!-- 본문 영역 -->
-        <tr class="notice-content">
+        <tr class="customerService-content">
           <td colspan="6">
             <div class="content">
               <h1>이번에 새롭게 출시한 향수 메뉴들을 소개합니다.</h1>
@@ -108,17 +115,17 @@
         </tr>
 
         <!-- 요약 내용 영역 -->
-        <tr class="notice-header">
+        <tr class="customerService-header">
           <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
           <td class="no">3</td>
-          <td class="title" class="title">향의 새로운 매장 강남점을 소개합니다.</td>
+          <td class="title">향의 새로운 매장 강남점을 소개합니다.</td>
           <td class="admin">Jain</td>
           <td class="date">23.02.11</td>
           <td class="view">14</td>
         </tr>
 
         <!-- 본문 영역 -->
-        <tr class="notice-content">
+        <tr class="customerService-content">
           <td colspan="6">
             <div class="content">
               <h1>이번에 새롭게 출시한 향수 메뉴들을 소개합니다.</h1>
@@ -141,17 +148,17 @@
         </tr>
 
         <!-- 요약 내용 영역 -->
-        <tr class="notice-header">
+        <tr class="customerService-header">
           <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
           <td class="no">4</td>
-          <td class="title" class="title">결제 관련 문의 안내</td>
+          <td class="title">결제 관련 문의 안내</td>
           <td class="admin">Babo</td>
           <td class="date">23.02.10</td>
           <td class="view">3</td>
         </tr>
 
         <!-- 본문 영역 -->
-        <tr class="notice-content">
+        <tr class="customerService-content">
           <td colspan="6">
             <div class="content">
               <h1>결제 관련 문의 안내</h1>
@@ -171,17 +178,17 @@
         </tr>
 
         <!-- 요약 내용 영역 -->
-        <tr class="notice-header">
+        <tr class="customerService-header">
           <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
           <td class="no">5</td>
-          <td class="title" class="title">고객센터 문의 안내</td>
+          <td class="title">고객센터 문의 안내</td>
           <td class="admin">Jain</td>
           <td class="date">23.02.5</td>
           <td class="view">3</td>
         </tr>
 
         <!-- 본문 영역 -->
-        <tr class="notice-content">
+        <tr class="customerService-content">
           <td colspan="6">
             <div class="content">
               <h1>고객센터 문의 안내</h1>
@@ -201,7 +208,7 @@
         </tr>
 
         <!-- 요약 내용 영역 -->
-        <tr class="notice-header">
+        <tr class="customerService-header">
           <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
           <td class="no">6</td>
           <td class="title">향기로운 봄을 맞이할 준비 되셨나요?</td>
@@ -211,7 +218,7 @@
         </tr>
 
         <!-- 본문 영역 -->
-        <tr class="notice-content">
+        <tr class="customerService-content">
           <td colspan="6">
             <div class="content">
               <h1>향기로운 봄을 맞이할 준비 되셨나요?</h1>
@@ -233,7 +240,7 @@
         </tr>
 
         <!-- 요약 내용 영역 -->
-        <tr class="notice-header">
+        <tr class="customerService-header">
           <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
           <td class="no">7</td>
           <td class="title">새로운 향수와 꽃다발, 지금 만나보세요!</td>
@@ -243,7 +250,7 @@
         </tr>
 
         <!-- 본문 영역 -->
-        <tr class="notice-content">
+        <tr class="customerService-content">
           <td colspan="6">
             <div class="content">
               <h1>새로운 향수와 꽃다발, 지금 만나보세요!</h1>
@@ -256,11 +263,14 @@
                 향기로 가득한 봄을 느끼고 싶으신 분들은 지금 바로 저희 쇼핑몰을 방문해보세요. 향수와 꽃다발로 봄을 더욱 더 풍성하게 즐길 수 있습니다.
               </p>
             </div>
+            <div class="content_btn">
+              <button type="button" class="btn btn-dark">수정</button>
+            </div>
           </td>
         </tr>
 
         <!-- 요약 내용 영역 -->
-        <tr class="notice-header">
+        <tr class="customerService-header">
           <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
           <td class="no">8</td>
           <td class="title">연인과 함께하는 봄, 선물로 드리는 향수와 꽃다발</td>
@@ -270,7 +280,7 @@
         </tr>
 
         <!-- 본문 영역 -->
-        <tr class="notice-content">
+        <tr class="customerService-content">
           <td colspan="6">
             <div class="content">
               <h1>연인과 함께하는 봄, 선물로 드리는 향수와 꽃다발</h1>
@@ -291,7 +301,7 @@
         </tr>
 
         <!-- 요약 내용 영역 -->
-        <tr class="notice-header">
+        <tr class="customerService-header">
           <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
           <td class="no">9</td>
           <td class="title">봄에 어울리는 상큼한 향수와 꽃다발, 이번 주문 시 할인 혜택!</td>
@@ -301,7 +311,7 @@
         </tr>
 
         <!-- 본문 영역 -->
-        <tr class="notice-content">
+        <tr class="customerService-content">
           <td colspan="6">
             <div class="content">
               <h1>봄에 어울리는 상큼한 향수와 꽃다발, 이번 주문 시 할인 혜택!</h1>
@@ -321,7 +331,7 @@
         </tr>
 
         <!-- 요약 내용 영역 -->
-        <tr class="notice-header">
+        <tr class="customerService-header">
           <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
           <td class="no">10</td>
           <td class="title">봄에 어울리는 향수와 꽃다발, 선물로 드리는 마음</td>
@@ -331,7 +341,7 @@
         </tr>
 
         <!-- 본문 영역 -->
-        <tr class="notice-content">
+        <tr class="customerService-content">
           <td colspan="6">
             <div class="content">
               <h1>봄에 어울리는 향수와 꽃다발, 선물로 드리는 마음</h1>
@@ -355,13 +365,13 @@
     
     <div class="pagination">
       <ul>
-        <li><a href="notice.html" class="">Prev</a></li>
-        <li><a href="notice.html" class="page_select">1</a></li>
-        <li><a href="notice.html">2</a></li>
-        <li><a href="notice.html">3</a></li>
-        <li><a href="notice.html">4</a></li>
-        <li><a href="notice.html">5</a></li>
-        <li><a href="notice.html" class="">Next</a></li>
+        <li><a href="customerService.html" class="">Prev</a></li>
+        <li><a href="customerService.html" class="page_select">1</a></li>
+        <li><a href="customerService.html">2</a></li>
+        <li><a href="customerService.html">3</a></li>
+        <li><a href="customerService.html">4</a></li>
+        <li><a href="customerService.html">5</a></li>
+        <li><a href="customerService.html" class="">Next</a></li>
       </ul>
     </div>
   </div>

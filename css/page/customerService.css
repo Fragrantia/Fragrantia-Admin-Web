@@ -7,74 +7,96 @@
    >> 해당 페이지 체크박스가 쓰이는 input 태그만 다시 revert로 설정 >> 해결
 */
 input,
-button {
+button,
+select {
   all: revert;
 }
-
 .check>input[type="checkbox"] {
   /* 모든 체크박스에 대한 스타일 적용 */
   width: 12px;
   height: 12px;
   border: 0.5px solid rgb(96, 96, 96);
 }
+.select_box {
+  width: 100%;
+  max-width: 900px;
+  margin: 48px auto 0 auto; /* 테이블 마진 탑과 합 >> 50px */
+  text-align: right;
+}
+.select_box>#category {
+  font-size: 0.9rem;
+}
+.select_box option {
+  font-size: 0.8rem;
+}
 
-#notice table {
+#customerService table {
   border-collapse: collapse;
   width: 100%;
-  margin: 10px auto 0 auto;
+  max-width: 900px;
+  margin: 2px auto 0 auto;
   background-color: #fff;
   table-layout: auto;
 }
 
-#notice th,
-#notice td {
+#customerService th,
+#customerService td {
   padding: 10px;
   text-align: center;
 }
 
-#notice td.title {
+#customerService td.title {
   width: 50%;
 }
 
-#notice th {
+#customerService th {
   background-color: #eee;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-.notice-header:hover {
+.customerService-header:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-#notice .title {
+#customerService .title {
   text-align: left;
 }
 
-#notice .notice-content {
+#customerService .customerService-content {
   display: none;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-#notice .notice-content .content {
+#customerService .customerService-content .content {
   padding: 20px;
   text-align: left;
   background-color: white;
 }
+/* =============== 인풋태그 배치 ============ */
+#customerService .customerService-content .content label {
+  display: block;
+}
+#customerService .customerService-content .content input {
+  display: inline-block;
+}
 
-#notice .notice-content .content_btn {
+/* ========================================== */
+#customerService .customerService-content .content_btn {
   text-align: right;
   margin: 0 20px 10px 0;
 }
 
-#notice .notice-content h1 {
+#customerService .customerService-content h1 {
   font-size: 17px;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-#notice .notice-content p {
+#customerService .customerService-content p {
   font-size: 14px;
 }
+
 
 .pagination {
   display: flex;
@@ -111,11 +133,11 @@ button {
 }
 
 @media screen and (max-width: 768px) {
-  #notice table {
+  #customerService table {
     table-layout: fixed;
   }
 
-  #notice td.title {
+  #customerService td.title {
     width: auto;
     white-space: nowrap;
     overflow: hidden;
