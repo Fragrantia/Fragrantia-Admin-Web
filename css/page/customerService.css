@@ -1,0 +1,155 @@
+/* Trouble Shooting #1
+   checkbox의 체크 이벤트 미작동
+   
+   Sol #1
+   페이지 검사를 통해 체크박스에 어떤 CSS가 해당 문제 현상을 야기하는지 분석
+   >> reset.css 에서 모든 태그의 모든 속성에 대한 초기화(all: unset;)가 원인
+   >> 해당 페이지 체크박스가 쓰이는 input 태그만 다시 revert로 설정 >> 해결
+*/
+input,
+button,
+select {
+  all: revert;
+}
+.check>input[type="checkbox"] {
+  /* 모든 체크박스에 대한 스타일 적용 */
+  width: 12px;
+  height: 12px;
+  border: 0.5px solid rgb(96, 96, 96);
+}
+.select_box {
+  width: 100%;
+  max-width: 900px;
+  margin: 48px auto 0 auto; /* 테이블 마진 탑과 합 >> 50px */
+  text-align: right;
+}
+.select_box>#category {
+  font-size: 0.9rem;
+}
+.select_box option {
+  font-size: 0.8rem;
+}
+
+#customerService table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 900px;
+  margin: 2px auto 0 auto;
+  background-color: #fff;
+  table-layout: auto;
+}
+
+#customerService th,
+#customerService td {
+  padding: 10px;
+  text-align: center;
+}
+
+#customerService td.title {
+  width: 50%;
+}
+
+#customerService th {
+  background-color: #eee;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.customerService-header:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#customerService .title {
+  text-align: left;
+}
+
+#customerService .customerService-content {
+  display: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#customerService .customerService-content .content {
+  padding: 20px;
+  text-align: left;
+  background-color: white;
+}
+/* =============== 인풋태그 배치 ============ */
+#customerService .customerService-content .content label {
+  display: block;
+}
+#customerService .customerService-content .content input {
+  display: inline-block;
+}
+
+/* ========================================== */
+#customerService .customerService-content .content_btn {
+  text-align: right;
+  margin: 0 20px 10px 0;
+}
+
+#customerService .customerService-content h1 {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#customerService .customerService-content p {
+  font-size: 14px;
+}
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+  width: 100%;
+}
+
+.pagination ul {
+  display: flex;
+}
+
+.pagination li {
+  margin: 0 10px;
+}
+
+.pagination li a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  color: #333;
+  border-radius: 5px;
+}
+
+.pagination li a:hover,
+.pagination li a.active {
+  background-color: #333;
+  color: #fff;
+}
+
+.pagination .page_select {
+  background-color: #333;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  #customerService table {
+    table-layout: fixed;
+  }
+
+  #customerService td.title {
+    width: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .date,
+  .view {
+    display: none;
+  }
+
+  .pagination ul {
+    font-size: 70%;
+  }
+}
