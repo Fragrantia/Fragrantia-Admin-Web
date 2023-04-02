@@ -22,18 +22,7 @@ div, h1, label, input {
   height: 12px;
   border: 0.5px solid rgb(96, 96, 96);
 }
-.select_box {
-  width: 100%;
-  max-width: 900px;
-  margin: 48px auto 0 auto; /* 테이블 마진 탑과 합 >> 50px */
-  text-align: right;
-}
-.select_box>#category {
-  font-size: 0.9rem;
-}
-.select_box option {
-  font-size: 0.8rem;
-}
+
 /* ================ 표 스타일 =============== */
 #customerService table {
   border-collapse: collapse;
@@ -206,3 +195,17 @@ textarea[type=text] {
     font-size: 70%;
   }
 }
+
+/* 게시판 좌측 상단 드롭박스 필터 추가 시 설정 */
+/* .select_box {
+  width: 100%;
+  max-width: 900px;
+  margin: 48px auto 0 auto; 테이블 마진 탑과 합 >> 50px
+  text-align: right;
+}
+.select_box>#category {
+  font-size: 0.9rem;
+}
+.select_box option {
+  font-size: 0.8rem;
+} */
