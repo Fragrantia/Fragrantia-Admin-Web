@@ -104,10 +104,15 @@ input{
         text-overflow: ellipsis;
     }
 
-    .tel, .addr {
+    .addr {
         display: none;
     }
-
+    #shop .shop-content .content{
+        display: block;
+    }
+    .br_m{
+        display: none;
+    }
     .pagination ul {
         font-size: 70%;
     }
