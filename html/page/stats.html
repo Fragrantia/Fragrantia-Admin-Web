@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>통계</title>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/pageModuleSetting.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="    https://cdn.jsdelivr.net/npm/gridjs@6.0.6/dist/gridjs.production.min.js"></script>
+    <script src="https://kit.fontawesome.com/047a434073.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../../css/page/stats.css">
+</head>
+<body>
+<div id="header"></div>
+
+<div class="wrap" id="app">
+    
+        <div class="chart visitorChartWrap">
+            <label class="chartLabelInput" for="visitInput"><i class="fa-solid fa-calendar"></i> 기간 설정</label>
+            <input class="chartInput" id="visitInput" type="text" name="daterange" value="" />
+            <canvas id="visitChart"></canvas>
+        </div>
+    <div class="row">
+        <div class="chart searchChartWrap">
+            <label class="chartLabelInput" for="searchInput"><i class="fa-solid fa-calendar"></i> 날짜 설정</label>
+            <input class="chartInput" id="searchInput" type="text" name="datepick" value="" />
+            <canvas id="searchChart"></canvas>
+        </div>
+        <div class="tableContainer">
+            <div class="tableh1">월별 방문자수 통계</div>
+            <div class="table" id="visitorTable"></div>
+            <div class="tableh1">항목별 정보</div>
+            <div class="table" id="itemTable"></div>
+        </div>
+       
+
+    </div>
+
+    
+</div>
+<div id="footer"></div>
+<script src="../../js/stats.js"></script>
+</body>
+</html>
+
+<!--월별 방문자수랑 품목 수-->
