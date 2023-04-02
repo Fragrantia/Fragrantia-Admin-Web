@@ -24,7 +24,8 @@ $(function () {
 
     if (
         document.title.includes("Notice") ||
-        document.title.includes("Shop")
+        document.title.includes("Shop") ||
+        document.title.includes("Product")
     ) {
         loadModule('buttonNav')
     }
