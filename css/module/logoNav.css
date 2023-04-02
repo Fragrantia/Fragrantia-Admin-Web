@@ -7,11 +7,12 @@
 .logo-img {
     width: 400px;
     height: 200px;
+    transition: all 0.2s ease-in-out;
 }
 
 .logo-img:hover {
     cursor: pointer;
-    width: 600px;
+    width: 420px;
     height: 200px;
     transition: all 0.2s ease-in-out;
 }
