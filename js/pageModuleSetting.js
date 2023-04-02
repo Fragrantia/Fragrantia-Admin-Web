@@ -21,4 +21,11 @@ $(function () {
         loadModule('header')
         loadModule('footer')
     }
+
+    if (
+        document.title.includes("Notice") ||
+        document.title.includes("Shop")
+    ) {
+        loadModule('buttonNav')
+    }
 })

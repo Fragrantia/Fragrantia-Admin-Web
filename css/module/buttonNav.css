@@ -1,0 +1,8 @@
+.button-nav {
+    display: flex;
+    justify-content: right;
+}
+
+.button-nav i{
+    padding: 5px;
+}
