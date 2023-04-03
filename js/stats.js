@@ -36,10 +36,11 @@ const makeVisitChart =   new Chart(visitChart, {
     }]
   },
   options: {
+    maintainAspectRatio: false,
     plugins: {
         title: {
             display: true,
-            text: '테스트 통계',
+            text: '방문자 수 통계',
                 font:{weight:"bold",size:"20px"},
                 padding: {
                     top: 10,
@@ -63,6 +64,8 @@ $(function() {
     maxDate: today,
     locale:{
       "format": "YYYY-MM-DD",
+      applyLabel: '설정',
+      cancelLabel: '취소',
     }
   }, function(start, end) {
     rangeVisitDate= visit_chart_data.slice(visit_chart_data.findIndex(e=>e.date.toDateString()==start._d.toDateString()),visit_chart_data.findIndex(e=>e.date.toDateString()==end._d.toDateString()));
@@ -122,6 +125,7 @@ const makesearchChart =   new Chart(searchChart, {
     }]
   },
   options: {
+    maintainAspectRatio: false,
     plugins: {
         title: {
             display: true,
@@ -190,13 +194,3 @@ new gridjs.Grid({
     ["향수","12"]
   ]
 }).render(document.getElementById('itemTable'))
-/*.table{
-        width: 40%;
-        table.gridjs-table{
-            td,th{
-                text-align: center;
-                width:unset;
-                padding: 6px 24px;
-            }
-        }
-    } */

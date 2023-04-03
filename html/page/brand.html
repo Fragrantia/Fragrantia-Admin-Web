@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>브랜드 소개 관리</title>
+    <!-- meta Setting -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/pageModuleSetting.js"></script>
+    <link rel="stylesheet" href="../../css/page/brand.css">
+    <link rel="stylesheet" href="../../css/global.css">
+    <script src="https://cdn.jsdelivr.net/npm/filepond@4.30.4/dist/filepond.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/filepond-plugin-image-preview@4.6.11/dist/filepond-plugin-image-preview.min.js"></script>
+</head>
+<body>
+<div id="header"></div>
+<div class="wrap" id="app">
+    <span class="h1">브랜드 관리</span>
+    <div class="container">
+        <div class="contentWrap" id="brandC">
+            <div class="h2">브랜드</div>
+            <input type="file">
+            <label for="brandTextarea">브랜드 영역의 소개글을 입력하세요</label>
+            <textarea id="brandTextarea" name="brand"></textarea>
+        </div>
+        <div class="contentWrap" id="flowerC">
+            <div class="h2">꽃</div>
+            <input type="file">
+            <label for="flowerTextarea">꽃 영역의 소개글을 입력하세요</label>
+            <textarea id="flowerTextarea" name="flower"></textarea>
+        </div>
+        <div class="contentWrap" id="perfumeC">
+            <div class="h2">향수</div>
+            <input type="file">
+            <label for="perfumeTextArea">향수 영역의 소개글을 입력하세요</label>
+            <textarea id="perfumeTextarea" name="perfuem"></textarea>
+        </div>
+        <div class="buttonContainer">
+            <button id="reset">취소</button>
+            <button id="submit">제출</button>
+        </div>
+    </div>
+</div>  
+<div id="footer"></div>
+<script src="../../js/brand.js"></script>
+</body>
+</html>
+
+<!--월별 방문자수랑 품목 수-->
