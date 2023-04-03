@@ -1,0 +1,72 @@
+.brand_story {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.brand_story.naming {
+    background-image: url('../../images/brandStory1.jpg');
+}
+
+.brand_story.nature {
+    background-image: url('../../images/brandStory2.jpg');
+}
+
+.brand_story.human {
+    background-image: url('../../images/brandStory3.jpg');
+}
+
+.description {
+    max-width: 50%;
+    border: 0.5px solid rgb(213, 213, 213);
+    text-align: center;
+    line-height: 30px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    padding: 10px;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.description > h1 {
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(213, 213, 213);
+    margin-bottom: 10px;
+    border-bottom: 0.5px solid rgb(213, 213, 213);
+}
+
+.description > p {
+    font-weight: 500;
+    color: rgb(213, 213, 213);
+}
+
+@media all and (max-width: 768px) {
+    .description {
+        max-width: 80%;
+        border: 0.5px solid rgb(213, 213, 213);
+        text-align: center;
+        line-height: 25px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        padding: 10px;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .description > h1 {
+        font-size: 1.2rem;
+    }
+
+    .description > p {
+        font-size: 0.8rem;
+    }
+
+    .brand_story {
+        height: 620px;
+        background-attachment: scroll;
+    }
+}
