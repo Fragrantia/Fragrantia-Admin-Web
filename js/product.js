@@ -64,6 +64,14 @@ $(document).ready(function () {
             changeTextarea.prop('disabled',true);
         }
     })
+    $('#item_name').change(function(){
+        var changeTitle = $(this).closest('tr').prev().find('td.title');
+        changeTitle.html($(this).val());
+    }); 
+    $('#item_category').change(function(){
+        var changeCategory = $(this).closest('tr').prev().find('td.category');
+        changeTitle.html($(this).val());
+    }); 
 
 });
 
