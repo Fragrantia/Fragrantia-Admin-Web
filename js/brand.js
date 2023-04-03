@@ -6,7 +6,7 @@ FilePond.registerPlugin(FilePondPluginFileValidateSize);
 inputComponents.forEach(e=>{
     ponds.push(FilePond.create(e,{
         storeAsFile: true,
-        labelIdle:"클릭하거나 드래그를 통해 제출하십시오",
+        labelIdle:"클릭 혹은 끌어오기를 통해 이미지를 변경하십시오.",
         maxFileSize:'10MB',
         acceptedFileTypes: ['image/*'],
     }))

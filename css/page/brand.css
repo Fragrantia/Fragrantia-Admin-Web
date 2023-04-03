@@ -77,6 +77,10 @@
 }
 #app div.container div.contentWrap {
   margin: 10px 20px;
+  /*             label{
+                  display: block;
+                  margin:10px 0 5px 0;
+              } */
 }
 @media (min-width: 768px) {
   #app div.container div.contentWrap {
@@ -86,11 +90,8 @@
 #app div.container div.contentWrap input[type=file]::-webkit-file-upload-button {
   visibility: hidden;
 }
-#app div.container div.contentWrap label {
-  display: block;
-  margin: 10px 0 5px 0;
-}
 #app div.container div.contentWrap textarea {
+  margin-top: 20px;
   border: 1px #c4c4c4 solid;
   width: 100%;
   min-height: 100px;
@@ -102,6 +103,7 @@
 }
 @media (min-width: 768px) {
   #app div.container div.contentWrap textarea {
+    margin-top: 30px;
     padding: 20px;
     font-size: 1.2rem;
     width: 100%;
@@ -117,6 +119,11 @@
 #app div.container div.contentWrap textarea::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #eee;
+}
+#app div.container div.contentWrap textarea::placeholder {
+  color: grey;
+  text-indent: 6px;
+  font-size: 1rem;
 }
 #app .buttonContainer {
   width: calc(100% - 20px);
