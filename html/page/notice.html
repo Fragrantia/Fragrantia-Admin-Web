@@ -25,6 +25,24 @@
   <div id="buttonNav"></div>
 
   <div id="notice" class="wrap">
+
+    <div id="modal" class="create-modal" style="display: none">
+      <div class="create-modal-content">
+        <h2>New Notice</h2>
+        <form>
+          <label for="title">제목</label>
+          <input type="text" id="title" name="title"><br>
+
+          <label for="content">내용</label>
+          <textarea id="content" name="content"></textarea><br>
+
+          <button id="modal-submit" type="submit">작성</button>
+          <button id="modal-close">취소</button>
+        </form>
+      </div>
+    </div>
+
+
     <!-- 테이블 영역 -->
     <table>
 
@@ -46,7 +64,7 @@
         <!-- 요약 내용 영역 -->
         <tr class="notice-header">
           <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
-          <td class="no">1</td>
+          <td class="no">60</td>
           <td class="title">이번에 새롭게 출시한 꽃 메뉴들을 소개합니다.</td>
           <td class="admin">Roy</td>
           <td class="date">23.03.27</td>
@@ -70,7 +88,7 @@
         <!-- 요약 내용 영역 -->
         <tr class="notice-header">
           <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
-          <td class="no">2</td>
+          <td class="no">59</td>
           <td class="title" class="title">이번에 새롭게 출시한 향수 메뉴들을 소개합니다.</td>
           <td class="admin">Roy</td>
           <td class="date">23.03.27</td>
@@ -98,12 +116,12 @@
               <button type="button" class="btn btn-dark">수정</button>
             </div>
           </td>
-        </tr>
+
 
         <!-- 요약 내용 영역 -->
         <tr class="notice-header">
           <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
-          <td class="no">3</td>
+          <td class="no">58</td>
           <td class="title" class="title">향의 새로운 매장 강남점을 소개합니다.</td>
           <td class="admin">Jain</td>
           <td class="date">23.02.11</td>
@@ -136,7 +154,7 @@
         <!-- 요약 내용 영역 -->
         <tr class="notice-header">
           <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
-          <td class="no">4</td>
+          <td class="no">57</td>
           <td class="title" class="title">결제 관련 문의 안내</td>
           <td class="admin">Babo</td>
           <td class="date">23.02.10</td>
@@ -166,7 +184,7 @@
         <!-- 요약 내용 영역 -->
         <tr class="notice-header">
           <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
-          <td class="no">5</td>
+          <td class="no">56</td>
           <td class="title" class="title">고객센터 문의 안내</td>
           <td class="admin">Jain</td>
           <td class="date">23.02.5</td>
@@ -196,7 +214,7 @@
         <!-- 요약 내용 영역 -->
         <tr class="notice-header">
           <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
-          <td class="no">6</td>
+          <td class="no">55</td>
           <td class="title">향기로운 봄을 맞이할 준비 되셨나요?</td>
           <td class="admin">Jain</td>
           <td class="date">23.02.01</td>
@@ -228,7 +246,7 @@
         <!-- 요약 내용 영역 -->
         <tr class="notice-header">
           <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
-          <td class="no">7</td>
+          <td class="no">54</td>
           <td class="title">새로운 향수와 꽃다발, 지금 만나보세요!</td>
           <td class="admin">King</td>
           <td class="date">23.01.26</td>
@@ -255,7 +273,7 @@
         <!-- 요약 내용 영역 -->
         <tr class="notice-header">
           <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
-          <td class="no">8</td>
+          <td class="no">53</td>
           <td class="title">연인과 함께하는 봄, 선물로 드리는 향수와 꽃다발</td>
           <td class="admin">Queen</td>
           <td class="date">23.01.23</td>
@@ -286,7 +304,7 @@
         <!-- 요약 내용 영역 -->
         <tr class="notice-header">
           <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
-          <td class="no">9</td>
+          <td class="no">52</td>
           <td class="title">봄에 어울리는 상큼한 향수와 꽃다발, 이번 주문 시 할인 혜택!</td>
           <td class="admin">Lose</td>
           <td class="date">23.01.14</td>
@@ -316,7 +334,7 @@
         <!-- 요약 내용 영역 -->
         <tr class="notice-header">
           <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
-          <td class="no">10</td>
+          <td class="no">51</td>
           <td class="title">봄에 어울리는 향수와 꽃다발, 선물로 드리는 마음</td>
           <td class="admin">Lime</td>
           <td class="date">23.01.1</td>

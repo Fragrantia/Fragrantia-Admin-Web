@@ -23,17 +23,40 @@
 
 <body>
     <div id="header"></div>
-    <div class="select_box wrap">
+    <div id="buttonNav"></div>
+    <!-- <div class="select_box wrap">
         <select id="category" name="product_category_select">
+            <option>전체</option>
             <option>꽃</option>
             <option>향수</option>
         </select>
-    </div>
-    <div id="buttonNav">
-
-    </div>
+    </div> -->
     <div id="product" class="wrap">
         <!-- 테이블 영역 -->
+        <div id="modal" class="create-modal" style="display: none">
+            <div class="create-modal-content">
+                <h2>New Product</h2>
+                <form>
+                    <label for="title">이름</label>
+                    <input type="text" id="title" name="title"><br>
+    
+                    <label for="price">가격</label>
+                    <input type="text" id="price" name="price"><br>
+    
+                    <label for="category">카테고리</label>
+                    <select name="category">
+                        <option>Flower</option>
+                        <option>Perfume</option>
+                    </select><br>
+    
+                    <label for="content">설명</label>
+                    <textarea id="content" name="content"></textarea><br>
+    
+                    <button id="modal-submit" type="submit">작성</button>
+                    <button id="modal-close">취소</button>
+                </form>
+            </div>
+        </div>
         <table>
 
             <!-- 테이블 헤드 영역 -->
@@ -55,7 +78,7 @@
                 <!-- 요약 내용 영역 -->
                 <tr class="product-header">
                     <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
-                    <td class="no">1</td>
+                    <td class="no">60</td>
                     <td class="title">Freesia</td>
                     <td class="category">꽃</td>
                     <td class="admin">Roy</td>
@@ -98,7 +121,7 @@ Freesia 로 인해 고객님의 삶이 더 행복하고 화사해지길 바랍�
                 <!-- 요약 내용 영역 -->
                 <tr class="product-header">
                     <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
-                    <td class="no">2</td>
+                    <td class="no">59</td>
                     <td class="title">Pine Peak</td>
                     <td class="category">향수</td>
                     <td class="admin">Lose</td>
@@ -141,7 +164,7 @@ Pine Peak는 성별과 연령에 구애받지 않고 사용할 수 있어 어떤
                 <!-- 요약 내용 영역 -->
                 <tr class="product-header">
                     <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
-                    <td class="no">3</td>
+                    <td class="no">58</td>
                     <td class="title">Rosewood Radiance</td>
                     <td class="category">향수</td>
                     <td class="admin">Lime</td>
@@ -184,7 +207,7 @@ Rosewood Radiance는 성별과 연령에 구애받지 않고 사용할 수 있�
                 <!-- 요약 내용 영역 -->
                 <tr class="product-header">
                     <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
-                    <td class="no">4</td>
+                    <td class="no">57</td>
                     <td class="title">Gypsophila</td>
                     <td class="category">꽃</td>
                     <td class="admin">Roy</td>
@@ -227,7 +250,7 @@ Gypsophila 로 인해 고객님의 삶이 더 행복하고 화사해지길 바�
                 <!-- 요약 내용 영역 -->
                 <tr class="product-header">
                     <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
-                    <td class="no">5</td>
+                    <td class="no">56</td>
                     <td class="title">Peony</td>
                     <td class="category">꽃</td>
                     <td class="admin">Jain</td>
@@ -269,7 +292,7 @@ Peony 로 인해 고객님의 삶이 더 행복하고 화사해지길 바랍니�
                 <!-- 요약 내용 영역 -->
                 <tr class="product-header">
                     <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
-                    <td class="no">6</td>
+                    <td class="no">54</td>
                     <td class="title">Sunflower</td>
                     <td class="category">꽃</td>
                     <td class="admin">Babo</td>
@@ -312,7 +335,7 @@ Sunflower 로 인해 고객님의 삶이 더 행복하고 화사해지길 바랍
                 <!-- 요약 내용 영역 -->
                 <tr class="product-header">
                     <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
-                    <td class="no">7</td>
+                    <td class="no">53</td>
                     <td class="title">Peruvian lily</td>
                     <td class="category">꽃</td>
                     <td class="admin">Jain</td>
@@ -356,7 +379,7 @@ Peruvian Lily 로 인해 고객님의 삶이 더 행복하고 화사해지길 �
                 <!-- 요약 내용 영역 -->
                 <tr class="product-header">
                     <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
-                    <td class="no">8</td>
+                    <td class="no">52</td>
                     <td class="title">Mandarin Moon</td>
                     <td class="category">향수</td>
                     <td class="admin">King</td>
@@ -399,8 +422,8 @@ Mandarin Moon는 성별과 연령에 구애받지 않고 사용할 수 있어 �
 
                 <!-- 요약 내용 영역 -->
                 <tr class="product-header">
-                    <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
-                    <td class="no">9</td>
+                    <td clasIs="check"><input type="checkbox" name="chk" id="chk" /></td>
+                    <td class="no">51</td>
                     <td class="title">Aconitum</td>
                     <td class="category">꽃</td>
                     <td class="admin">Queen</td>
@@ -444,7 +467,7 @@ Aconitum 로 인해 고객님의 삶이 더 행복하고 화사해지길 바랍�
                 <!-- 요약 내용 영역 -->
                 <tr class="product-header">
                     <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
-                    <td class="no">10</td>
+                    <td class="no">50</td>
                     <td class="title">Eucalyptus</td>
                     <td class="category">꽃</td>
                     <td class="admin">Jain</td>
@@ -461,15 +484,15 @@ Aconitum 로 인해 고객님의 삶이 더 행복하고 화사해지길 바랍�
 
                             <label for="item_price">Price</label>
                             <input type="text" name="item_price" id="item_price " value="79,000"
-                                disabled="true"="true"><br />
+                                disabled="true"><br />
 
                             <label for="item_category">Category</label>
-                            <select id="item_category" name="product_category_select" disabled="true"="true">
+                            <select id="item_category" name="product_category_select" disabled="true">
                                 <option selected>꽃</option>
                                 <option>향수</option>
                             </select>
                             <label for="item_detail">Detail</label>
-                            <textarea name="item_detail" id="item_detail" disabled="true"="true">
+                            <textarea name="item_detail" id="item_detail" disabled="true">
 Eucalyptus 은 노란색으로 꽃잎이 이루어진 아름다운 꽃으로, 따뜻하고 밝은 느낌을 주어 기쁨과 희열의 감정을 불러일으킵니다.
 이국적인 느낌을 주는 Eucalyptus 을 실감할 수 있도록 제작되었습니다. 실내 인테리어, 선물용, 결혼식 등 다양한 장소와 상황에서 활용 가능합니다.
 또한, 향기가 가미된 제품도 함께 제공하여, 보다 생동감 있고 섬세한 느낌을 더해줍니다.
@@ -477,7 +500,7 @@ Eucalyptus 로 인해 고객님의 삶이 더 행복하고 화사해지길 바�
 
                             <label for="item_file">File</label>
                             <input type="text" name="item_file" id="item_file" value="eucalyptus.jpg"
-                                disabled="true"="true"><br />
+                                disabled="true"><br />
                         </div>
                         <div class="content_btn">
                             <button type="button" class="btn btn-dark">수정</button>
