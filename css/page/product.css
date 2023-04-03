@@ -9,20 +9,7 @@ select {
   height: 12px;
   border: 0.5px solid rgb(96, 96, 96);
 }
-.select_box {
-  /* width: 100%;
-  max-width: 900px; */
-  margin: 48px auto 0 auto; /*테이블 마진 탑과 합 >> 50px*/
-  /* text-align: right; */
-  display: flex;
-  justify-content: end;
-}
-.select_box>#category {
-  font-size: 0.9rem;
-}
-.select_box option {
-  font-size: 0.8rem;
-}
+
 
 #product table {
   border-collapse: collapse;

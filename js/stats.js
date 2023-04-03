@@ -147,6 +147,8 @@ $(function() {
     minDate:'2023-01-01',// 날짜 2023년 1월 1일 부터?
     maxDate: today,
     locale:{
+      applyLabel: '설정',
+      cancelLabel: '취소',
       "format": "YYYY-MM-DD",
     }
   }, function(start) {

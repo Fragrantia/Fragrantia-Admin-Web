@@ -19,13 +19,14 @@ $(function () {
         loadModule("logoNav")
     } else {
         loadModule('header')
-        loadModule('footer')
+        //loadModule('footer')
     }
 
     if (
         document.title.includes("Notice") ||
         document.title.includes("Shop") ||
-        document.title.includes("Product")
+        document.title.includes("Product")||
+        document.title.includes("Customer Service")
     ) {
         loadModule('buttonNav')
     }
