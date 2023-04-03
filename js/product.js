@@ -47,15 +47,16 @@ $(document).ready(function () {
         else $("#chkAll").prop("checked", true);
     });
 
+
+    //수정버튼 클릭시 on/off
     $(".content_btn>button").click(function (event) {
         event.preventDefault();
         var changeInput = $(this).closest('div').prev().children('input');
         var changeTextarea = $(this).closest('div').prev().children('textarea');
         var changeSelect = $(this).closest('div').prev().children('select');
-
+        //수정사항 있을시 게시글 헤더에 반영
         var originTitle = changeInput.val();
         var originCategory = changeSelect.val();
-        console.log(changeInput);
 
         if (changeInput.attr('disabled') !== undefined ||
             changeTextarea.attr('disabled') !== undefined ||
@@ -67,27 +68,37 @@ $(document).ready(function () {
             changeInput.prop('disabled', true);
             changeSelect.prop('disabled', true);
             changeTextarea.prop('disabled', true);
+            //타이틀과, 카테고리 수정시 반영
             var changeTitle = changeInput.closest('tr').prev().find('td.title');
             changeTitle.html(originTitle);
             var changeCategory = changeSelect.closest('tr').prev().find('td.category');
             changeCategory.html(originCategory);
         }
-
-
-
-
-
-
-
     })
-    // $('#item_name').change(function () {
-    //     var changeTitle = $(this).closest('tr').prev().find('td.title');
-    //     changeTitle.html($(this).val());
-    // });
-    // $('#item_category').change(function () {
-    //     var changeCategory = $(this).closest('tr').prev().find('td.category');
-    //     changeCategory.html($(this).val());
-    // });
+    $('#category').change(function () {
+        var selectCategory = $(this).val();
+        var list = Array.from(document.getElementsByClassName('category'));
+
+        list.forEach(element => { //display 초기화
+            element.closest('tr').style.display = '';
+        });
+
+        if (selectCategory === '전체') { //전체 클릭시 리턴
+            return;
+        }
+
+        var filterList = list.filter(it => {
+            if ($(it).html() === 'Category') { //<th>Category</th>는 제외
+                return false;
+            }
+            return $(it).html() !== selectCategory;
+        });
+
+        filterList.forEach(element => {
+            element.closest('tr').style.display = 'none'; //선택안된 카테고리 숨김
+        });
+    });
+
 
 });
 

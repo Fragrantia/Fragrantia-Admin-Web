@@ -23,43 +23,40 @@
 
 <body>
     <div id="header"></div>
-    <div class="select_box wrap">
-
+    <div id="buttonNav"></div>
+    <!-- <div class="select_box wrap">
+        <select id="category" name="product_category_select">
+            <option>전체</option>
+            <option>꽃</option>
+            <option>향수</option>
+        </select>
+    </div> -->
+    <div id="product" class="wrap">
+        <!-- 테이블 영역 -->
         <div id="modal" class="create-modal" style="display: none">
             <div class="create-modal-content">
                 <h2>New Product</h2>
                 <form>
                     <label for="title">이름</label>
                     <input type="text" id="title" name="title"><br>
-
+    
                     <label for="price">가격</label>
                     <input type="text" id="price" name="price"><br>
-
+    
                     <label for="category">카테고리</label>
                     <select name="category">
                         <option>Flower</option>
                         <option>Perfume</option>
                     </select><br>
-
+    
                     <label for="content">설명</label>
                     <textarea id="content" name="content"></textarea><br>
-
+    
                     <button id="modal-submit" type="submit">작성</button>
                     <button id="modal-close">취소</button>
                 </form>
             </div>
         </div>
-
-        <select id="category" name="product_category_select">
-            <option>꽃</option>
-            <option>향수</option>
-        </select>
-    </div>
-    <div id="buttonNav">
-
-    </div>
-    <div id="product" class="wrap">
-        <!-- 테이블 영역 -->
         <table>
 
             <!-- 테이블 헤드 영역 -->

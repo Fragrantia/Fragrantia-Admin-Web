@@ -1,6 +1,12 @@
-.button-nav {
+input,
+button,
+select {
+  all: revert;
+}
+
+.but_nav_box {
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
 }
 
 .button-nav i{
@@ -78,3 +84,11 @@
 .create-modal-content button:hover {
     background-color: dimgrey;
 }
+
+  .select_box>#category {
+    font-size: 0.9rem;
+  }
+  .select_box option {
+    font-size: 0.8rem;
+  }
+  
