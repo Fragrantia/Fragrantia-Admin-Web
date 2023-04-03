@@ -1,12 +1,14 @@
-// Get a file input reference
 const inputComponents = document.querySelectorAll('input[type="file"]');
 let ponds=[];
 FilePond.registerPlugin(FilePondPluginImagePreview);
-// Create a FilePond instance and post files to /upload
+FilePond.registerPlugin(FilePondPluginFileValidateType);
+FilePond.registerPlugin(FilePondPluginFileValidateSize);
 inputComponents.forEach(e=>{
     ponds.push(FilePond.create(e,{
         storeAsFile: true,
-        labelIdle:"이미지를 클릭하거나 드래그를 통해 제출하십시오"
+        labelIdle:"클릭하거나 드래그를 통해 제출하십시오",
+        maxFileSize:'10MB',
+        acceptedFileTypes: ['image/*'],
     }))
     }
 )

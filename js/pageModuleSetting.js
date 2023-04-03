@@ -19,7 +19,7 @@ $(function () {
         loadModule("logoNav")
     } else {
         loadModule('header')
-        loadModule('footer')
+        //loadModule('footer')
     }
 
     if (
