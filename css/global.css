@@ -26,7 +26,12 @@ a, li, div, span, button, p, h1 {
 @media all and (min-width:768px) and (max-width:1024px){
 }
 @media all and (max-width:768px){
+    .wrap.open{
+        margin-left:50vw;
+        
+    }
     .wrap{
+        transition:all 0.2s ease-in-out;
         width: calc(100% - 20px); /*margin을 포함해서 100% 계산*/
         margin: 10px;
     }
