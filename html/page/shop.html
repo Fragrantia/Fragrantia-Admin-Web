@@ -27,6 +27,29 @@
     <div id="buttonNav"></div>
     <div id="shop" class="wrap">
 
+        <div id="modal" class="create-modal" style="display: none">
+            <div class="create-modal-content">
+                <h2>New Shop</h2>
+                <form>
+                    <label for="branch">매장</label>
+                    <select name="branch" id="branch">
+                        <option>Jamsil Store</option>
+                        <option>Gangnam Store</option>
+                        <option>Yangjae Store</option>
+                    </select><br>
+
+                    <label for="phone">전화번호</label>
+                    <input type="text" id="phone" name="phone"><br>
+
+                    <label for="photo">사진</label>
+                    <input type="file" id="photo" name="photo"><br>
+
+                    <button id="modal-submit" type="submit">작성</button>
+                    <button id="modal-close">취소</button>
+                </form>
+            </div>
+        </div>
+
         <table>
             <tr><!-- 헤더 -->
                 <th class="check"><input type="checkbox" name="chkAll" id="chkAll" /></th>
@@ -37,7 +60,7 @@
             </tr>
             <tr class="shop-header">
                 <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
-                <td>1</td>
+                <td>3</td>
                 <td class="title">Jamsil Store</td>
                 <td class="tel">02-0000-0000</td>
                 <td class="addr">서울시 송파구 잠실동 ○○</td>
@@ -91,7 +114,7 @@
             </tr>
             <tr class="shop-header">
                 <td class="check"><input type="checkbox" name="chk" id="chk" /></td>
-                <td>3</td>
+                <td>1</td>
                 <td class="title">Yangjae Store</td>
                 <td class="tel">02-0000-0000</td>
                 <td class="addr">서울시 서초구 양재동 ○○</td>
