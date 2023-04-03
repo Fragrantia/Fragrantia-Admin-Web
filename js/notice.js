@@ -61,7 +61,7 @@ $(document).ready(function () {
     const saveBtn = document.createElement('button');
     saveBtn.type = 'button';
     saveBtn.className = 'btn btn-primary';
-    saveBtn.innerText = '수정 완료';
+    saveBtn.innerText = 'Save';
     saveBtn.addEventListener('click', () => {
       noticeTextarea.classList.remove('editable');
       noticeTextarea.setAttribute('readonly', '');
