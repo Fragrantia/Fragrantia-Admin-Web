@@ -1,6 +1,24 @@
 @import url("https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css");
+.wrap .chart .chartWrap {
+  height: 100vw;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .wrap .chart .chartWrap {
+    height: 400px;
+  }
+}
+.wrap .chart div.labelwrap {
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .wrap .chart div.labelwrap {
+    display: block;
+  }
+}
 .wrap .chart label.chartLabelInput {
-  display: block;
+  margin-right: 10px;
   padding-left: 5px;
   font-size: 1rem;
   margin-bottom: 5px;
@@ -8,24 +26,52 @@
   color: #1a3b5d;
   user-select: none;
 }
+@media (min-width: 768px) {
+  .wrap .chart label.chartLabelInput {
+    display: block;
+  }
+}
 .wrap .chart input.chartInput {
   padding: 5px 10px;
   border-radius: 10px;
   border: 1px solid grey;
 }
+.wrap .chart input.chartInput#visitInput {
+  width: 220px;
+}
 .wrap .row {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
-.wrap .searchChartWrap {
-  width: 60%;
+@media (min-width: 1024px) {
+  .wrap .searchChartWrap {
+    width: 60%;
+  }
 }
 .wrap .tableContainer {
-  width: 40%;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
+}
+@media (min-width: 1024px) {
+  .wrap .tableContainer {
+    width: 40%;
+  }
+}
+.wrap .tableContainer .tableWrap {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .wrap .tableContainer .tableWrap {
+    width: 50%;
+  }
+}
+@media (min-width: 1024px) {
+  .wrap .tableContainer .tableWrap {
+    width: 100%;
+  }
 }
 .wrap .tableContainer .tableh1 {
   margin-bottom: 2rem;
@@ -34,7 +80,9 @@
   text-align: center;
 }
 .wrap .table {
-  width: 100%;
+  width: calc(100% - 40px);
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .wrap .table div.gridjs.gridjs-container {
   margin-bottom: 2rem;
