@@ -1,3 +1,5 @@
-#id {
-  background-color: antiquewhite;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap&text=%eb%b8%8c%eb%9e%9c%eb%93%9c+%ea%b4%80%eb%a6%ac");
+#app span.h1 {
+  font-size: 1.5rem;
+  text-rendering: optimizeLegibility;
 }
