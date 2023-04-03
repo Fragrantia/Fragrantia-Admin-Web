@@ -1,5 +1,12 @@
 const inputComponents = document.querySelectorAll('input[type="file"]');
 let ponds=[];
+let images=['','',''];
+function reader(file, callback) {
+    const fr = new FileReader();
+    fr.onload = () => callback(null, fr.result);
+    fr.onerror = (err) => callback(err);
+    fr.readAsDataURL(file);
+  }
 FilePond.registerPlugin(FilePondPluginImagePreview);
 FilePond.registerPlugin(FilePondPluginFileValidateType);
 FilePond.registerPlugin(FilePondPluginFileValidateSize);
@@ -12,6 +19,14 @@ inputComponents.forEach(e=>{
     }))
     }
 )
+ponds.forEach((p,index)=>{
+    p.on('addfile',(error,file)=>{
+    if(error){
+        console.log("Error!",error);
+    }
+    reader(file.file,(err,res)=>{images[index]=res})
+    console.log(images)})
+})
 const textAreas = document.querySelectorAll('textarea');
 
 const reset = document.getElementById('reset');
@@ -93,7 +108,7 @@ preview.addEventListener('click',function () {
         </head>
         <body>
           <div id="header"></div>
-          <section class="brand_story naming">
+          <section class="brand_story naming" ${ponds[0].getFiles().length>0&&`style="background-image:url(${images[0]})"`}>
             <div class="description">
               <h1>#1 History</h1>
               <p>
@@ -101,7 +116,7 @@ preview.addEventListener('click',function () {
               </p>
             </div>
           </section>
-          <section class="brand_story nature">
+          <section class="brand_story nature"${ponds[1].getFiles().length>0&&`style="background-image:url(${images[1]})"`}>
             <div class="description">
               <h1>#2 Nature</h1>
               <p>
@@ -109,7 +124,7 @@ preview.addEventListener('click',function () {
               </p>
             </div>
           </section>
-          <section class="brand_story human">
+          <section class="brand_story human"${ponds[2].getFiles().length>0&&`style="background-image:url(${images[2]})"`}>
             <div class="description">
               <h1>#3 Human</h1>
               <p>
