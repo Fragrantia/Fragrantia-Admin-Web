@@ -11,25 +11,19 @@ button,
 select {
   all: revert;
 }
+div, h1, label, input {
+  margin: 0;
+  padding: 0;
+}
+/* ============== 체크박스 ============== */
 .check>input[type="checkbox"] {
   /* 모든 체크박스에 대한 스타일 적용 */
   width: 12px;
   height: 12px;
   border: 0.5px solid rgb(96, 96, 96);
 }
-.select_box {
-  width: 100%;
-  max-width: 900px;
-  margin: 48px auto 0 auto; /* 테이블 마진 탑과 합 >> 50px */
-  text-align: right;
-}
-.select_box>#category {
-  font-size: 0.9rem;
-}
-.select_box option {
-  font-size: 0.8rem;
-}
 
+/* ================ 표 스타일 =============== */
 #customerService table {
   border-collapse: collapse;
   width: 100%;
@@ -62,42 +56,90 @@ select {
 #customerService .title {
   text-align: left;
 }
-
+/* =============== 본문 영역 ============ */
 #customerService .customerService-content {
   display: none;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 #customerService .customerService-content .content {
-  padding: 20px;
-  text-align: left;
+  overflow: hidden;
+  padding: 10px 20px;
+  text-align: center;
   background-color: white;
 }
-/* =============== 인풋태그 배치 ============ */
-#customerService .customerService-content .content label {
-  display: block;
+.content>.content_left {
+  float: left;
+  width: 15%;
+  text-align: right;
+  padding-right: 10px;
 }
-#customerService .customerService-content .content input {
+.content>.content_left>label {
+  height: 26.4px;
+  margin-bottom: 0.8rem;
+}
+.content>.content_left>label[for="ask_detail"], 
+.content>.content_left>label[for="ask_answer"] {
+  height: 80px;
+}
+.content>.content_center {
+  float: left;
+  width: 40%;
+}
+input[type=text] {
+  display: block;
+  width: 98%; 
+  font-size: 0.8rem;
+  margin-bottom: 0.8rem;
+  padding: 2px;
+}
+textarea[type=text] {
+  display: block;
+  width: 100%;
+  font-size: 0.8rem;
+  text-align: left;
+  margin-bottom: 0.8rem;
+  padding: 2px;
+  border: 0.5px solid rgb(133, 133, 133);
+  border-radius: 2px;
+}
+.content>.content_right {
+  float: right;
+  position: relative;
+  width: 40%;
+  height: 320px; /* content_center 높이와 동일하게 */
+}
+.content>.content_right>img {
+  width: 80%;
+  margin-bottom: 10px;
+}
+.content>.content_right>label[for="ask_img_file"] {
   display: inline-block;
 }
+.content>.content_right>#ask_img_file {
+  display: inline-block;
+  width: 50%;
+  margin-bottom: 0.5rem;
+}
 
-/* ========================================== */
-#customerService .customerService-content .content_btn {
+.content>.content_right>button {
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -35px;
+  width: 70px;
+  height: 25px;
+  padding: 2px;
+  text-align: center;
+  border: 0.5px solid gray;
+  font-size: 0.7rem;
+}
+
+.customerService-content .content_btn {
   text-align: right;
-  margin: 0 20px 10px 0;
+  margin: 5px 20px 10px 0;
 }
-
-#customerService .customerService-content h1 {
-  font-size: 17px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-#customerService .customerService-content p {
-  font-size: 14px;
-}
-
-
+/* ======== 이전 숫자 다음 영역 ======== */
 .pagination {
   display: flex;
   justify-content: center;
@@ -131,7 +173,7 @@ select {
   background-color: #333;
   color: #fff;
 }
-
+/* ================ 미디어 쿼리 ================ */
 @media screen and (max-width: 768px) {
   #customerService table {
     table-layout: fixed;
@@ -153,3 +195,17 @@ select {
     font-size: 70%;
   }
 }
+
+/* 게시판 좌측 상단 드롭박스 필터 추가 시 설정 */
+/* .select_box {
+  width: 100%;
+  max-width: 900px;
+  margin: 48px auto 0 auto; 테이블 마진 탑과 합 >> 50px
+  text-align: right;
+}
+.select_box>#category {
+  font-size: 0.9rem;
+}
+.select_box option {
+  font-size: 0.8rem;
+} */
