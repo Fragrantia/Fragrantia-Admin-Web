@@ -10,6 +10,7 @@
     <script src="../../js/jquery.min.js"></script>
     <script src="../../js/pageModuleSetting.js"></script>
     <link rel="stylesheet" href="../../css/page/brand.css">
+    <link rel="stylesheet" href="../../css/page/brandInfo.css">
     <link rel="stylesheet" href="../../css/global.css">
     <script src="https://cdn.jsdelivr.net/npm/filepond@4.30.4/dist/filepond.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/filepond-plugin-image-preview@4.6.11/dist/filepond-plugin-image-preview.min.js"></script>
@@ -21,25 +22,27 @@
 <div class="wrap" id="app">
     <span class="h1">브랜드 관리</span>
     <div class="container">
-        <div class="contentWrap" id="brandC">
-            <div class="h2">브랜드</div>
+        <div class="contentWrap" id="namingC">
+            <div class="h2">#1 History</div>
             <input type="file">
-            <textarea id="brandTextarea"
-            placeholder="브랜드 영역의 소개글을 입력하세요" name="brand"></textarea>
+            <textarea id="namingTextarea"
+            placeholder="#1 영역의 소개글을 입력하세요" name="naming"></textarea>
         </div>
-        <div class="contentWrap" id="flowerC">
-            <div class="h2">꽃</div>
+        <div class="contentWrap" id="natureC">
+            <div class="h2">#2 Nature</div>
             <input type="file">
-            <textarea id="flowerTextarea"
-            placeholder="꽃 영역의 소개글을 입력하세요" name="flower"></textarea>
+            <textarea id="natureTextarea"
+            placeholder="#2 영역의 소개글을 입력하세요" name="nature"></textarea>
         </div>
-        <div class="contentWrap" id="perfumeC">
-            <div class="h2">향수</div>
+        <div class="contentWrap" id="humanC">
+            <div class="h2">#3 Human</div>
             <input type="file">
-            <textarea id="perfumeTextarea"
-            placeholder="향수 영역의 소개글을 입력하세요" name="perfuem"></textarea>
+            <textarea id="humanTextarea"
+            placeholder="#3 영역의 소개글을 입력하세요" name="human"></textarea>
         </div>
         <div class="buttonContainer">
+            <button id="test">테스트</button>
+            <button id="preview">미리보기</button>
             <button id="reset">취소</button>
             <button id="submit">제출</button>
         </div>
