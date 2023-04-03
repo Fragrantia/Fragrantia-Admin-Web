@@ -194,8 +194,3 @@ new gridjs.Grid({
     ["향수","12"]
   ]
 }).render(document.getElementById('itemTable'))
-function beforePrintHandler () {
-  for (let id in Chart.instances) {
-      Chart.instances[id].resize();
-  }
-}
