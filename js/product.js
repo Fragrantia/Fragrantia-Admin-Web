@@ -76,6 +76,7 @@ $(document).ready(function () {
         }
     })
     $('#category').change(function () {
+        alert('adsf');
         var selectCategory = $(this).val();
         var list = Array.from(document.getElementsByClassName('category'));
 

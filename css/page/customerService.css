@@ -27,7 +27,6 @@ div, h1, label, input {
 #customerService table {
   border-collapse: collapse;
   width: 100%;
-  max-width: 900px;
   margin: 2px auto 0 auto;
   background-color: #fff;
   table-layout: auto;
