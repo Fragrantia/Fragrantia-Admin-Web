@@ -26,8 +26,8 @@ $(function () {
         },
         submitHandler: function (form) {
             alert('로그인 되었습니다!');
-            window.location.href = './login.html'
             form.submit();
+            window.location.href = './stats.html'
         },
         errorPlacement: function (error, element) {
             error.appendTo(element.parent().next());
