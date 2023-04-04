@@ -81,29 +81,29 @@ $(document).ready(function () {
         $('#item_file_name').val(fileName);
     });
 
-    $('#category').change(function () {
-        var selectCategory = $(this).val();
-        var list = Array.from(document.getElementsByClassName('category'));
+    // $('#category').change(function () {
+    //     var selectCategory = $(this).val();
+    //     var list = Array.from(document.getElementsByClassName('category'));
 
-        list.forEach(element => { //display 초기화
-            element.closest('tr').style.display = '';
-        });
+    //     list.forEach(element => { //display 초기화
+    //         element.closest('tr').style.display = '';
+    //     });
 
-        if (selectCategory === '전체') { //전체 클릭시 리턴
-            return;
-        }
+    //     if (selectCategory === '전체') { //전체 클릭시 리턴
+    //         return;
+    //     }
 
-        var filterList = list.filter(it => {
-            if ($(it).html() === 'Category') { //<th>Category</th>는 제외
-                return false;
-            }
-            return $(it).html() !== selectCategory;
-        });
+    //     var filterList = list.filter(it => {
+    //         if ($(it).html() === 'Category') { //<th>Category</th>는 제외
+    //             return false;
+    //         }
+    //         return $(it).html() !== selectCategory;
+    //     });
 
-        filterList.forEach(element => {
-            element.closest('tr').style.display = 'none'; //선택안된 카테고리 숨김
-        });
-    });
+    //     filterList.forEach(element => {
+    //         element.closest('tr').style.display = 'none'; //선택안된 카테고리 숨김
+    //     });
+    // });
 
 });
 
