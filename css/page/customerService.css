@@ -138,6 +138,10 @@ textarea[type=text] {
   text-align: right;
   margin: 5px 20px 10px 0;
 }
+
+.content_bottom {
+  display: none;
+}
 /* ======== 이전 숫자 다음 영역 ======== */
 .pagination {
   display: flex;
@@ -186,6 +190,10 @@ textarea[type=text] {
     text-overflow: ellipsis;
   }
 
+  .content_bottom {
+    display: none;
+  }
+
   .date,
   .view {
     display: none;
@@ -196,16 +204,40 @@ textarea[type=text] {
   }
 }
 
-/* 게시판 좌측 상단 드롭박스 필터 추가 시 설정 */
-/* .select_box {
-  width: 100%;
-  max-width: 900px;
-  margin: 48px auto 0 auto; 테이블 마진 탑과 합 >> 50px
-  text-align: right;
+@media screen and (max-width: 425px) {
+  .content>.content_left {
+    float: left;
+    width: 25%;
+    text-align: right;
+    padding-right: 10px;
+  }
+  .content>.content_center {
+    float: right;
+    width: 60%;
+  }
+  input[type=text] {
+    display: block;
+    width: 98%; 
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+    padding: 2px;
+  }
+  .content>.content_right {
+    display: none;
+  }
+  .content_bottom {
+    display: block;
+    position: relative;
+  }
+  .content_bottom>input {
+    display: inline-block;
+    width: 50%;
+    margin-top: 0.8rem;
+  }
+  .content_bottom>button {
+    padding: 2px;
+    text-align: center;
+    border: 0.5px solid gray;
+    font-size: 0.7rem;
+  }
 }
-.select_box>#category {
-  font-size: 0.9rem;
-}
-.select_box option {
-  font-size: 0.8rem;
-} */
