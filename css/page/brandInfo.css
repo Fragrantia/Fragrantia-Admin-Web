@@ -70,3 +70,14 @@
         background-attachment: scroll;
     }
 }
+
+#overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0);
+    cursor:pointer;
+}
