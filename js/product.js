@@ -32,9 +32,15 @@ $(document).ready(function () {
     // chkAll을 클릭했을 때, chkAll이 체크되어 있으면, name이 chk인 input 태그의 checked 속성을 true로 설정
     // >> 전체 체크 박스를 체크하면 모든 체크 박스 체크 
     $("#chkAll").click(function () {
-        if ($("#chkAll").is(":checked")) $("input[name=chk]").prop("checked", true);
-        else $("input[name=chk]").prop("checked", false);
+      if ($("#chkAll").is(":checked")) {
+        // 필터링 돼서 안 보이는 행은 체크되지 않는 기능 추가
+        $("input[name=chk]").not(':hidden').prop("checked", true);
+      } else {  
+        $("input[name=chk]").not(':hidden').prop("checked", false);
+      }
     });
+    
+
     // name이 chk인 input 태그를 클릭하면, name이 chk인 요소의 개수를 total 변수에 저장.
     // name이 chk인 요소 중에 checked 되어 있는 요소의 개수를 checked 개수에 저장.
     $("input[name=chk]").click(function () {
@@ -79,30 +85,6 @@ $(document).ready(function () {
     $('#item_file').change(function(){
         var fileName = $(this).val();
         $('#item_file_name').val(fileName);
-    });
-
-    $('#category').change(function () {
-        var selectCategory = $(this).val();
-        var list = Array.from(document.getElementsByClassName('category'));
-
-        list.forEach(element => { //display 초기화
-            element.closest('tr').style.display = '';
-        });
-
-        if (selectCategory === '전체') { //전체 클릭시 리턴
-            return;
-        }
-
-        var filterList = list.filter(it => {
-            if ($(it).html() === 'Category') { //<th>Category</th>는 제외
-                return false;
-            }
-            return $(it).html() !== selectCategory;
-        });
-
-        filterList.forEach(element => {
-            element.closest('tr').style.display = 'none'; //선택안된 카테고리 숨김
-        });
     });
 
 });
