@@ -22,7 +22,7 @@ while(tempDate<=today){
 }
 var rangeVisitDate=visit_chart_data;
 let chart_bg_colors = Array.from({ length: visit_chart_data.length }, (value, index) =>`hsla(${Math.round(255*(index/rangeVisitDate.length))}, 100%, 80%, 0.5)`);
-const makeVisitChart =   new Chart(visitChart, {
+var visit_config={
   type: 'line',
   data: {
     labels: rangeVisitDate.map(range=>range.date.toLocaleDateString()),
@@ -55,7 +55,8 @@ const makeVisitChart =   new Chart(visitChart, {
       }
     }
   }
-});
+}
+const makeVisitChart =   new Chart(visitChart,visit_config );
 
 $(function() {
   $('input[name="daterange"]').daterangepicker({
@@ -70,7 +71,7 @@ $(function() {
   }, function(start, end) {
     rangeVisitDate= visit_chart_data.slice(visit_chart_data.findIndex(e=>e.date.toDateString()==start._d.toDateString()),visit_chart_data.findIndex(e=>e.date.toDateString()==end._d.toDateString()));
     makeVisitChart.data.labels=rangeVisitDate.map(range=>range.date.toLocaleDateString());
-    makeVisitChart.data.datasets.data=rangeVisitDate.map(range=>range.date.toLocaleDateString());
+    makeVisitChart.data.datasets[0].data=rangeVisitDate.map(range=>range.value);
     makeVisitChart.update();
   });
 });
