@@ -1,6 +1,6 @@
 // colspan size 조절 함수
 let reColspan = function () {
-  if ($(window).width() <= 768) {
+  if ($(window).width() <= 425  ) {
     // colspan 속성이 6인 td 요소를 찾아서
     $("tr.notice-content td[colspan='6']").each(function () {
       // colspan 속성 값을 4으로 변경

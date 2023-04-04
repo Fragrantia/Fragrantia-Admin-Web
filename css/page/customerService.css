@@ -169,7 +169,7 @@ textarea[type=text] {
   color: #fff;
 }
 /* ================ 미디어 쿼리 ================ */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   #customerService table {
     table-layout: fixed;
   }

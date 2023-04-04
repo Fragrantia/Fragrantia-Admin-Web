@@ -50,17 +50,20 @@
   display: none;
 }
 
-#app span.h1 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-rendering: optimizeLegibility;
+/* span.h1 {
   margin: 10px 20px;
-}
-@media (min-width: 768px) {
+} */
+@media all and (max-width: 768px) {
   #app span.h1 {
-    margin: 20px 50px;
+    margin: 20px ;
   }
 }
+@media all and (min-width: 768px){
+  #app span.h1 {
+    margin: 20px  50px;
+  }
+}
+
 #app .h2 {
   margin-bottom: 5px;
   font-size: 1.2rem;

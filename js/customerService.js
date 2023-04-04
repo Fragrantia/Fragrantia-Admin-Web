@@ -1,6 +1,6 @@
 // colspan size 조절 함수
 let reColspan = function () {
-    if ($(window).width() <= 768) {
+    if ($(window).width() <= 425) {
         // colspan 속성이 5인 td 요소를 찾아서
         $("tr.customerService-content td[colspan='5']").each(function () {
             // colspan 속성 값을 3으로 변경
