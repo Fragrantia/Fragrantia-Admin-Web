@@ -15,14 +15,6 @@ div, h1, label, input {
   margin: 0;
   padding: 0;
 }
-/* ============== 체크박스 ============== */
-.check>input[type="checkbox"] {
-  /* 모든 체크박스에 대한 스타일 적용 */
-  width: 12px;
-  height: 12px;
-  border: 0.5px solid rgb(96, 96, 96);
-}
-
 /* ================ 표 스타일 =============== */
 #customerService table {
   border-collapse: collapse;
