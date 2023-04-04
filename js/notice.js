@@ -47,37 +47,37 @@ $(document).ready(function () {
     else $("#chkAll").prop("checked", true);
   });
 
-});
-$(document).ready(function () {
-  const editBtn = document.getElementById('edit-btn');
-  const noticeTextarea = document.getElementById('notice-textarea');
+  // 수정버튼 동작
+  const editBtns = document.querySelectorAll('.edit-btn');
+
+  editBtns.forEach((editBtn) => {
+  const noticeTextarea = editBtn.closest('.notice-content').querySelector('[name="notice-textarea"]');
 
   editBtn.addEventListener('click', () => {
-    noticeTextarea.classList.add('editable');
-    noticeTextarea.removeAttribute('readonly');
+      noticeTextarea.classList.add('editable');
+      noticeTextarea.removeAttribute('readonly');
 
-    editBtn.classList.add('hide');
+      editBtn.classList.add('hide');
 
-    const saveBtn = document.createElement('button');
-    saveBtn.type = 'button';
-    saveBtn.className = 'btn btn-primary';
-    saveBtn.innerText = 'Save';
-    saveBtn.addEventListener('click', () => {
+      const saveBtn = document.createElement('button');
+      saveBtn.type = 'button';
+      saveBtn.className = 'btn btn-primary';
+      saveBtn.innerText = 'Save';
+      saveBtn.addEventListener('click', () => {
       noticeTextarea.classList.remove('editable');
       noticeTextarea.setAttribute('readonly', '');
       saveBtn.remove();
       editBtn.classList.remove('hide');
       alert('수정되었습니다.');
-    });
+      });
 
     editBtn.parentNode.insertBefore(saveBtn, editBtn.nextSibling);
+    });
   });
-
 });
-
-
 
 $(window).resize(
   //화면 바꿀 때 colspan 화면 크기에 맞게 설정
   reColspan
+
 );
