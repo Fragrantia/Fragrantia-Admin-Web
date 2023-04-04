@@ -125,22 +125,8 @@
   text-indent: 6px;
   font-size: 1rem;
 }
-#app .buttonContainer {
-  width: calc(100% - 20px);
-  margin: 20px 10px 0 10px;
-  display: flex;
-  justify-content: space-evenly;
-}
-@media (min-width: 768px) {
-  #app .buttonContainer {
-    margin-top: 40px;
-    margin-left: 40px;
-    margin-right: 40px;
-    width: calc(100% - 80px);
-    justify-content: flex-end;
-  }
-}
-#app .buttonContainer button {
+#app .buttonWrap button {
+  margin-left: 10px;
   width: 80px;
   font-size: 1rem;
   color: black;
@@ -149,12 +135,35 @@
   border: 1px solid #c4c4c4;
   border-radius: 16px;
 }
+#app .buttonWrap button#preview {
+  justify-self: flex-start;
+  display: inline;
+  margin-left: 20px;
+}
 @media (min-width: 768px) {
-  #app .buttonContainer button {
+  #app .buttonWrap button#preview {
+    margin-left: 50px;
+  }
+}
+@media (min-width: 768px) {
+  #app .buttonWrap button {
     margin-left: 40px;
   }
 }
-#app .buttonContainer button:active {
+#app .buttonWrap button:active {
   color: white;
   background-color: grey;
+}
+#app .buttonWrap .buttonContainer {
+  width: calc(100% - 130px);
+  margin: 20px 10px 0 10px;
+  display: inline-flex;
+  justify-content: flex-end;
+}
+@media (min-width: 768px) {
+  #app .buttonWrap .buttonContainer {
+    right: 0;
+    margin-left: 40px;
+    width: calc(100% - 220px);
+  }
 }
