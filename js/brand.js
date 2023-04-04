@@ -107,7 +107,7 @@ function openPreview() {
   <html lang="ko">
   
   <head>
-    <title>Brand Story 미리보기</title>
+    <title>미리보기 - 클릭시 닫힙니다.</title>
   
     <!-- meta Setting -->
     <meta charset="UTF-8">
