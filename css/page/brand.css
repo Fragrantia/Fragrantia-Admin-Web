@@ -125,7 +125,7 @@
   text-indent: 6px;
   font-size: 1rem;
 }
-#app button {
+#app .buttonWrap button {
   margin-left: 10px;
   width: 80px;
   font-size: 1rem;
@@ -135,33 +135,33 @@
   border: 1px solid #c4c4c4;
   border-radius: 16px;
 }
-#app button#preview {
+#app .buttonWrap button#preview {
   justify-self: flex-start;
   display: inline;
   margin-left: 20px;
 }
 @media (min-width: 768px) {
-  #app button#preview {
+  #app .buttonWrap button#preview {
     margin-left: 50px;
   }
 }
 @media (min-width: 768px) {
-  #app button {
+  #app .buttonWrap button {
     margin-left: 40px;
   }
 }
-#app button:active {
+#app .buttonWrap button:active {
   color: white;
   background-color: grey;
 }
-#app .buttonContainer {
+#app .buttonWrap .buttonContainer {
   width: calc(100% - 130px);
   margin: 20px 10px 0 10px;
   display: inline-flex;
   justify-content: flex-end;
 }
 @media (min-width: 768px) {
-  #app .buttonContainer {
+  #app .buttonWrap .buttonContainer {
     right: 0;
     margin-left: 40px;
     width: calc(100% - 220px);
