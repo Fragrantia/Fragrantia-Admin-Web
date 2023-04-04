@@ -55,16 +55,41 @@ select {
   background-color: white;
 }
 /* =============== 인풋태그 배치 ============ */
-#product .product-content .content label {
-  display: block;
+#product .product-content .content>label {
+  display: inline-block;
 }
+
 #product .product-content .content input {
   display: inline-block;
 }
+
 textarea{
-    width: 90%;
-    height: 100px;
+  width: 90%;
+  height: 100px;
 }
+  .content.labelLabel{
+    display: block;
+  }
+  .content>.fileUpload{
+      display: inline-block;
+      padding: 0.5%;
+      background-color: rgb(216, 216, 216);
+      cursor: pointer;
+  }
+
+.content input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+
+
+
+
+
 /* ========================================== */
 #product .product-content .content_btn {
   text-align: right;
@@ -116,10 +141,23 @@ textarea{
   color: #fff;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   #product table {
     table-layout: fixed;
   }
+
+  /* #proudct th.check{
+    width: 10%;
+  }
+  #proudct th.no{
+    width: 10%;
+  }
+  #proudct th.title{
+    width: 30%;
+  }
+  #proudct th.category{
+    width: 30%;
+  } */
 
   #product td.title,
   #product th.category {
