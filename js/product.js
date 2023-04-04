@@ -1,7 +1,7 @@
 // colspan size 조절 함수
 let reColspan = function () {
-    if ($(window).width() <= 768) {
-        // colspan 속성이 6인 td 요소를 찾아서
+    if ($(window).width() <= 425) {
+        // colspan 속성이 7인 td 요소를 찾아서
         $("tr.product-content td[colspan='7']").each(function () {
             // colspan 속성 값을 4으로 변경
             $(this).attr("colspan", "4");
@@ -11,7 +11,7 @@ let reColspan = function () {
     else {
         // colspan 속성이 4인 td 요소를 찾아서
         $("tr.product-content td[colspan='4']").each(function () {
-            // colspan 속성 값을 6으로 변경
+            // colspan 속성 값을 7으로 변경
             $(this).attr("colspan", "7");
         });
     }
@@ -74,9 +74,14 @@ $(document).ready(function () {
             var changeCategory = changeSelect.closest('tr').prev().find('td.category');
             changeCategory.html(originCategory);
         }
-    })
+    });
+
+    $('#item_file').change(function(){
+        var fileName = $(this).val();
+        $('#item_file_name').val(fileName);
+    });
+
     $('#category').change(function () {
-        alert('adsf');
         var selectCategory = $(this).val();
         var list = Array.from(document.getElementsByClassName('category'));
 
@@ -99,7 +104,6 @@ $(document).ready(function () {
             element.closest('tr').style.display = 'none'; //선택안된 카테고리 숨김
         });
     });
-
 
 });
 

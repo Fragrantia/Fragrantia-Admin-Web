@@ -24,13 +24,6 @@
 <body>
     <div id="header"></div>
     <div id="buttonNav"></div>
-    <!-- <div class="select_box wrap">
-        <select id="category" name="product_category_select">
-            <option>전체</option>
-            <option>꽃</option>
-            <option>향수</option>
-        </select>
-    </div> -->
     <div id="product" class="wrap">
         <!-- 테이블 영역 -->
         <div id="modal" class="create-modal" style="display: none">
@@ -39,19 +32,19 @@
                 <form>
                     <label for="title">이름</label>
                     <input type="text" id="title" name="title"><br>
-    
+
                     <label for="price">가격</label>
                     <input type="text" id="price" name="price"><br>
-    
+
                     <label for="category">카테고리</label>
                     <select name="category">
                         <option>Flower</option>
                         <option>Perfume</option>
                     </select><br>
-    
+
                     <label for="content">설명</label>
                     <textarea id="content" name="content"></textarea><br>
-    
+
                     <button id="modal-submit" type="submit">작성</button>
                     <button id="modal-close">취소</button>
                 </form>
@@ -90,27 +83,30 @@
                 <tr class="product-content">
                     <td colspan="7">
                         <div class="content">
-                            <label for="item_name">Name</label>
+                            <label for="item_name">Name</label><br />
                             <input type="text" name="item_name" id="item_name" value="Freesia" disabled="true"><br />
 
-                            <label for="item_price">Price</label>
+                            <label for="item_price">Price</label><br />
                             <input type="text" name="item_price" id="item_price " value="79,000" disabled="true"><br />
 
-                            <label for="item_category">Category</label>
+                            <label for="item_category">Category</label><br />
                             <select id="item_category" name="product_category_select" disabled="true">
                                 <option selected>꽃</option>
                                 <option>향수</option>
-                            </select>
-                            <label for="item_detail">Detail</label>
+                            </select><br />
+                            <label for="item_detail">Detail</label><br />
                             <textarea name="item_detail" id="item_detail" disabled="true">
 Freesia 은 노란색으로 꽃잎이 이루어진 아름다운 꽃으로, 따뜻하고 밝은 느낌을 주어 기쁨과 희열의 감정을 불러일으킵니다.
 이국적인 느낌을 주는 Freesia 을 실감할 수 있도록 제작되었습니다. 실내 인테리어, 선물용, 결혼식 등 다양한 장소와 상황에서 활용 가능합니다.
 또한, 향기가 가미된 제품도 함께 제공하여, 보다 생동감 있고 섬세한 느낌을 더해줍니다.
-Freesia 로 인해 고객님의 삶이 더 행복하고 화사해지길 바랍니다.</textarea>
+Freesia 로 인해 고객님의 삶이 더 행복하고 화사해지길 바랍니다.</textarea><br />
 
-                            <label for="item_file">File</label>
-                            <input type="text" name="item_file" id="item_file" value="freesia.jpg"
-                                disabled="true"><br />
+                            <label for="item_file" class="labelLabel">File</label><br />
+                            <label for="item_file" class="fileUpload">UPLOAD</label>
+                            <input type="text" name="item_file_name" id="item_file_name" value="freesia.jpg"
+                                disabled="true">
+                            <input type="file" id="item_file" disabled="true">
+
                         </div>
                         <div class="content_btn">
                             <button type="button" class="btn btn-dark">수정</button>
@@ -133,27 +129,29 @@ Freesia 로 인해 고객님의 삶이 더 행복하고 화사해지길 바랍�
                 <tr class="product-content">
                     <td colspan="7">
                         <div class="content">
-                            <label for="item_name">Name</label>
+                            <label for="item_name">Name</label><br />
                             <input type="text" name="item_name" id="item_name" value="Pine Peak" disabled="true"><br />
 
-                            <label for="item_price">Price</label>
+                            <label for="item_price">Price</label><br />
                             <input type="text" name="item_price" id="item_price " value="79,000" disabled="true"><br />
 
-                            <label for="item_category">Category</label>
+                            <label for="item_category">Category</label><br />
                             <select id="item_category" name="product_category_select" disabled="true">
                                 <option>꽃</option>
                                 <option selected>향수</option>
-                            </select>
-                            <label for="item_detail">Detail</label>
+                            </select><br />
+                            <label for="item_detail">Detail</label><br />
                             <textarea name="item_detail" id="item_detail" disabled="true">
 Pine Peak는 대자연의 풍경이 주는 상쾌함과 편안함을 담아내는 향수입니다.
 첫 향은 소나무의 상큼하고 시원한 향기가 느껴지며, 이어지는 중향은 가죽과 목재의 향이 어우러져 고급스러움과 깊이를 더해줍니다.
 마지막으로는 밀감과 민트 등의 상큼한 노트가 얹혀져 상쾌하면서도 섬세한 향이 완성됩니다.
-Pine Peak는 성별과 연령에 구애받지 않고 사용할 수 있어 어떤 고객님에게도 아름다운 향을 선사해드립니다.</textarea>
+Pine Peak는 성별과 연령에 구애받지 않고 사용할 수 있어 어떤 고객님에게도 아름다운 향을 선사해드립니다.</textarea><br />
 
-                            <label for="item_file">File</label>
-                            <input type="text" name="item_file_text" id="item_file_text" value="pinePeck.jpg" multiple disabled="true">
-                            <!-- <input type="file" id="item_file" disabled="true"> <br /> -->
+                            <label for="item_file" class="labelLabel">File</label><br />
+                            <label for="item_file" class="fileUpload">UPLOAD</label>
+                            <input type="text" name="item_file_name" id="item_file_name" value="freesia.jpg"
+                                disabled="true">
+                            <input type="file" id="item_file" disabled="true">
                         </div>
                         <div class="content_btn">
                             <button type="button" class="btn btn-dark">수정</button>
@@ -176,28 +174,30 @@ Pine Peak는 성별과 연령에 구애받지 않고 사용할 수 있어 어떤
                 <tr class="product-content">
                     <td colspan="7">
                         <div class="content">
-                            <label for="item_name">Name</label>
+                            <label for="item_name">Name</label><br />
                             <input type="text" name="item_name" id="item_name" value="Rosewood Radiance"
                                 disabled="true"><br />
 
-                            <label for="item_price">Price</label>
+                            <label for="item_price">Price</label><br />
                             <input type="text" name="item_price" id="item_price " value="79,000" disabled="true"><br />
 
-                            <label for="item_category">Category</label>
+                            <label for="item_category">Category</label><br />
                             <select id="item_category" name="product_category_select" disabled="true">
                                 <option>꽃</option>
                                 <option selected>향수</option>
-                            </select>
-                            <label for="item_detail">Detail</label>
+                            </select><br />
+                            <label for="item_detail">Detail</label><br />
                             <textarea name="item_detail" id="item_detail" disabled="true">
 Rosewood Radiance는 대자연의 풍경이 주는 상쾌함과 편안함을 담아내는 향수입니다.
 첫 향은 소나무의 상큼하고 시원한 향기가 느껴지며, 이어지는 중향은 가죽과 목재의 향이 어우러져 고급스러움과 깊이를 더해줍니다.
 마지막으로는 밀감과 민트 등의 상큼한 노트가 얹혀져 상쾌하면서도 섬세한 향이 완성됩니다.
-Rosewood Radiance는 성별과 연령에 구애받지 않고 사용할 수 있어 어떤 고객님에게도 아름다운 향을 선사해드립니다.</textarea>
+Rosewood Radiance는 성별과 연령에 구애받지 않고 사용할 수 있어 어떤 고객님에게도 아름다운 향을 선사해드립니다.</textarea><br />
 
-                            <label for="item_file">File</label>
-                            <input type="text" name="item_file" id="item_file" value="rosewoodRadiance.jpg"
-                                disabled="true"><br />
+                            <label for="item_file" class="labelLabel">File</label><br />
+                            <label for="item_file" class="fileUpload">UPLOAD</label>
+                            <input type="text" name="item_file_name" id="item_file_name" value="freesia.jpg"
+                                disabled="true">
+                            <input type="file" id="item_file" disabled="true">
                         </div>
                         <div class="content_btn">
                             <button type="button" class="btn btn-dark">수정</button>
@@ -219,27 +219,29 @@ Rosewood Radiance는 성별과 연령에 구애받지 않고 사용할 수 있�
                 <tr class="product-content">
                     <td colspan="7">
                         <div class="content">
-                            <label for="item_name">Name</label>
+                            <label for="item_name">Name</label><br />
                             <input type="text" name="item_name" id="item_name" value="Gypsophila" disabled="true"><br />
 
-                            <label for="item_price">Price</label>
+                            <label for="item_price">Price</label><br />
                             <input type="text" name="item_price" id="item_price " value="79,000" disabled="true"><br />
 
-                            <label for="item_category">Category</label>
+                            <label for="item_category">Category</label><br />
                             <select id="item_category" name="product_category_select" disabled="true">
                                 <option selected>꽃</option>
                                 <option>향수</option>
-                            </select>
-                            <label for="item_detail">Detail</label>
+                            </select><br />
+                            <label for="item_detail">Detail</label><br />
                             <textarea name="item_detail" id="item_detail" disabled="true">
 Gypsophila 은 노란색으로 꽃잎이 이루어진 아름다운 꽃으로, 따뜻하고 밝은 느낌을 주어 기쁨과 희열의 감정을 불러일으킵니다.
 이국적인 느낌을 주는 Gypsophila 을 실감할 수 있도록 제작되었습니다. 실내 인테리어, 선물용, 결혼식 등 다양한 장소와 상황에서 활용 가능합니다.
 또한, 향기가 가미된 제품도 함께 제공하여, 보다 생동감 있고 섬세한 느낌을 더해줍니다.
-Gypsophila 로 인해 고객님의 삶이 더 행복하고 화사해지길 바랍니다.</textarea>
+Gypsophila 로 인해 고객님의 삶이 더 행복하고 화사해지길 바랍니다.</textarea><br />
 
-                            <label for="item_file">File</label>
-                            <input type="text" name="item_file" id="item_file" value="gypsophila.jpg"
-                                disabled="true"><br />
+                            <label for="item_file" class="labelLabel">File</label><br />
+                            <label for="item_file" class="fileUpload">UPLOAD</label>
+                            <input type="text" name="item_file_name" id="item_file_name" value="freesia.jpg"
+                                disabled="true">
+                            <input type="file" id="item_file" disabled="true">
                         </div>
                         <div class="content_btn">
                             <button type="button" class="btn btn-dark">수정</button>
@@ -262,26 +264,29 @@ Gypsophila 로 인해 고객님의 삶이 더 행복하고 화사해지길 바�
                 <tr class="product-content">
                     <td colspan="7">
                         <div class="content">
-                            <label for="item_name">Name</label>
+                            <label for="item_name">Name</label><br />
                             <input type="text" name="item_name" id="item_name" value="Peony" disabled="true"><br />
 
-                            <label for="item_price">Price</label>
+                            <label for="item_price">Price</label><br />
                             <input type="text" name="item_price" id="item_price " value="79,000" disabled="true"><br />
 
-                            <label for="item_category">Category</label>
+                            <label for="item_category">Category</label><br />
                             <select id="item_category" name="product_category_select" disabled="true">
                                 <option selected>꽃</option>
                                 <option>향수</option>
-                            </select>
-                            <label for="item_detail">Detail</label>
+                            </select><br />
+                            <label for="item_detail">Detail</label><br />
                             <textarea name="item_detail" id="item_detail" disabled="true">
 Peony 은 노란색으로 꽃잎이 이루어진 아름다운 꽃으로, 따뜻하고 밝은 느낌을 주어 기쁨과 희열의 감정을 불러일으킵니다.
 이국적인 느낌을 주는 Peony 을 실감할 수 있도록 제작되었습니다. 실내 인테리어, 선물용, 결혼식 등 다양한 장소와 상황에서 활용 가능합니다.
 또한, 향기가 가미된 제품도 함께 제공하여, 보다 생동감 있고 섬세한 느낌을 더해줍니다.
-Peony 로 인해 고객님의 삶이 더 행복하고 화사해지길 바랍니다.</textarea>
+Peony 로 인해 고객님의 삶이 더 행복하고 화사해지길 바랍니다.</textarea><br />
 
-                            <label for="item_file">File</label>
-                            <input type="text" name="item_file" id="item_file" value="peony.jpg" disabled="true"><br />
+                            <label for="item_file" class="labelLabel">File</label><br />
+                            <label for="item_file" class="fileUpload">UPLOAD</label>
+                            <input type="text" name="item_file_name" id="item_file_name" value="freesia.jpg"
+                                disabled="true">
+                            <input type="file" id="item_file" disabled="true">
                         </div>
                         <div class="content_btn">
                             <button type="button" class="btn btn-dark">수정</button>
@@ -304,27 +309,29 @@ Peony 로 인해 고객님의 삶이 더 행복하고 화사해지길 바랍니�
                 <tr class="product-content">
                     <td colspan="7">
                         <div class="content">
-                            <label for="item_name">Name</label>
+                            <label for="item_name">Name</label><br />
                             <input type="text" name="item_name" id="item_name" value="Sunflower" disabled="true"><br />
 
-                            <label for="item_price">Price</label>
+                            <label for="item_price">Price</label><br />
                             <input type="text" name="item_price" id="item_price " value="79,000" disabled="true"><br />
 
-                            <label for="item_category">Category</label>
+                            <label for="item_category">Category</label><br />
                             <select id="item_category" name="product_category_select" disabled="true">
                                 <option selected>꽃</option>
                                 <option>향수</option>
-                            </select>
-                            <label for="item_detail">Detail</label>
+                            </select><br />
+                            <label for="item_detail">Detail</label><br />
                             <textarea name="item_detail" id="item_detail" disabled="true">
 Sunflower 은 노란색으로 꽃잎이 이루어진 아름다운 꽃으로, 따뜻하고 밝은 느낌을 주어 기쁨과 희열의 감정을 불러일으킵니다.
 이국적인 느낌을 주는 Sunflower 을 실감할 수 있도록 제작되었습니다. 실내 인테리어, 선물용, 결혼식 등 다양한 장소와 상황에서 활용 가능합니다.
 또한, 향기가 가미된 제품도 함께 제공하여, 보다 생동감 있고 섬세한 느낌을 더해줍니다.
-Sunflower 로 인해 고객님의 삶이 더 행복하고 화사해지길 바랍니다.</textarea>
+Sunflower 로 인해 고객님의 삶이 더 행복하고 화사해지길 바랍니다.</textarea><br />
 
-                            <label for="item_file">File</label>
-                            <input type="text" name="item_file" id="item_file" value="sunflower.jpg"
-                                disabled="true"><br />
+                            <label for="item_file" class="labelLabel">File</label><br />
+                            <label for="item_file" class="fileUpload">UPLOAD</label>
+                            <input type="text" name="item_file_name" id="item_file_name" value="freesia.jpg"
+                                disabled="true">
+                            <input type="file" id="item_file" disabled="true">
                         </div>
                         <div class="content_btn">
                             <button type="button" class="btn btn-dark">수정</button>
@@ -347,28 +354,30 @@ Sunflower 로 인해 고객님의 삶이 더 행복하고 화사해지길 바랍
                 <tr class="product-content">
                     <td colspan="7">
                         <div class="content">
-                            <label for="item_name">Name</label>
+                            <label for="item_name">Name</label><br />
                             <input type="text" name="item_name" id="item_name" value="Peruvian Lily"
                                 disabled="true"><br />
 
-                            <label for="item_price">Price</label>
+                            <label for="item_price">Price</label><br />
                             <input type="text" name="item_price" id="item_price " value="79,000" disabled="true"><br />
 
-                            <label for="item_category">Category</label>
+                            <label for="item_category">Category</label><br />
                             <select id="item_category" name="product_category_select" disabled="true">
                                 <option selected>꽃</option>
                                 <option>향수</option>
-                            </select>
-                            <label for="item_detail">Detail</label>
+                            </select><br />
+                            <label for="item_detail">Detail</label><br />
                             <textarea name="item_detail" id="item_detail" disabled="true">
 Peruvian Lily 은 노란색으로 꽃잎이 이루어진 아름다운 꽃으로, 따뜻하고 밝은 느낌을 주어 기쁨과 희열의 감정을 불러일으킵니다.
 이국적인 느낌을 주는 Peruvian Lily 을 실감할 수 있도록 제작되었습니다. 실내 인테리어, 선물용, 결혼식 등 다양한 장소와 상황에서 활용 가능합니다.
 또한, 향기가 가미된 제품도 함께 제공하여, 보다 생동감 있고 섬세한 느낌을 더해줍니다.
-Peruvian Lily 로 인해 고객님의 삶이 더 행복하고 화사해지길 바랍니다.</textarea>
+Peruvian Lily 로 인해 고객님의 삶이 더 행복하고 화사해지길 바랍니다.</textarea><br />
 
-                            <label for="item_file">File</label>
-                            <input type="text" name="item_file" id="item_file" value="peruvianLily.jpg"
-                                disabled="true"><br />
+                            <label for="item_file" class="labelLabel">File</label><br />
+                            <label for="item_file" class="fileUpload">UPLOAD</label>
+                            <input type="text" name="item_file_name" id="item_file_name" value="freesia.jpg"
+                                disabled="true">
+                            <input type="file" id="item_file" disabled="true">
                         </div>
                         <div class="content_btn">
                             <button type="button" class="btn btn-dark">수정</button>
@@ -391,28 +400,30 @@ Peruvian Lily 로 인해 고객님의 삶이 더 행복하고 화사해지길 �
                 <tr class="product-content">
                     <td colspan="7">
                         <div class="content">
-                            <label for="item_name">Name</label>
+                            <label for="item_name">Name</label><br />
                             <input type="text" name="item_name" id="item_name" value="Mandarin Moon"
                                 disabled="true"><br />
 
-                            <label for="item_price">Price</label>
+                            <label for="item_price">Price</label><br />
                             <input type="text" name="item_price" id="item_price " value="79,000" disabled="true"><br />
 
-                            <label for="item_category">Category</label>
+                            <label for="item_category">Category</label><br />
                             <select id="item_category" name="product_category_select" disabled="true">
                                 <option>꽃</option>
                                 <option selected>향수</option>
-                            </select>
-                            <label for="item_detail">Detail</label>
+                            </select><br />
+                            <label for="item_detail">Detail</label><br />
                             <textarea name="item_detail" id="item_detail" disabled="true">
 Mandarin Moon는 대자연의 풍경이 주는 상쾌함과 편안함을 담아내는 향수입니다.
 첫 향은 소나무의 상큼하고 시원한 향기가 느껴지며, 이어지는 중향은 가죽과 목재의 향이 어우러져 고급스러움과 깊이를 더해줍니다.
 마지막으로는 밀감과 민트 등의 상큼한 노트가 얹혀져 상쾌하면서도 섬세한 향이 완성됩니다.
-Mandarin Moon는 성별과 연령에 구애받지 않고 사용할 수 있어 어떤 고객님에게도 아름다운 향을 선사해드립니다.</textarea>
+Mandarin Moon는 성별과 연령에 구애받지 않고 사용할 수 있어 어떤 고객님에게도 아름다운 향을 선사해드립니다.</textarea><br />
 
-                            <label for="item_file">File</label>
-                            <input type="text" name="item_file" id="item_file" value="mandarinMoon.jpg"
-                                disabled="true"><br />
+                            <label for="item_file" class="labelLabel">File</label><br />
+                            <label for="item_file" class="fileUpload">UPLOAD</label>
+                            <input type="text" name="item_file_name" id="item_file_name" value="freesia.jpg"
+                                disabled="true">
+                            <input type="file" id="item_file" disabled="true">
                         </div>
                         <div class="content_btn">
                             <button type="button" class="btn btn-dark">수정</button>
@@ -435,27 +446,29 @@ Mandarin Moon는 성별과 연령에 구애받지 않고 사용할 수 있어 �
                 <tr class="product-content">
                     <td colspan="7">
                         <div class="content">
-                            <label for="item_name">Name</label>
+                            <label for="item_name">Name</label><br />
                             <input type="text" name="item_name" id="item_name" value="Aconitum" disabled="true"><br />
 
-                            <label for="item_price">Price</label>
+                            <label for="item_price">Price</label><br />
                             <input type="text" name="item_price" id="item_price " value="79,000" disabled="true"><br />
 
-                            <label for="item_category">Category</label>
+                            <label for="item_category">Category</label><br />
                             <select id="item_category" name="product_category_select" disabled="true">
                                 <option selected>꽃</option>
                                 <option>향수</option>
-                            </select>
-                            <label for="item_detail">Detail</label>
+                            </select><br />
+                            <label for="item_detail">Detail</label><br />
                             <textarea name="item_detail" id="item_detail" disabled="true">
 Aconitum 은 노란색으로 꽃잎이 이루어진 아름다운 꽃으로, 따뜻하고 밝은 느낌을 주어 기쁨과 희열의 감정을 불러일으킵니다.
 이국적인 느낌을 주는 Aconitum 을 실감할 수 있도록 제작되었습니다. 실내 인테리어, 선물용, 결혼식 등 다양한 장소와 상황에서 활용 가능합니다.
 또한, 향기가 가미된 제품도 함께 제공하여, 보다 생동감 있고 섬세한 느낌을 더해줍니다.
-Aconitum 로 인해 고객님의 삶이 더 행복하고 화사해지길 바랍니다.</textarea>
+Aconitum 로 인해 고객님의 삶이 더 행복하고 화사해지길 바랍니다.</textarea><br />
 
-                            <label for="item_file">File</label>
-                            <input type="text" name="item_file" id="item_file" value="aconitum.jpg"
-                                disabled="true"><br />
+                            <label for="item_file" class="labelLabel">File</label><br />
+                            <label for="item_file" class="fileUpload">UPLOAD</label>
+                            <input type="text" name="item_file_name" id="item_file_name" value="freesia.jpg"
+                                disabled="true">
+                            <input type="file" id="item_file" disabled="true">
                         </div>
                         <div class="content_btn">
                             <button type="button" class="btn btn-dark">수정</button>
@@ -479,28 +492,29 @@ Aconitum 로 인해 고객님의 삶이 더 행복하고 화사해지길 바랍�
                 <tr class="product-content">
                     <td colspan="7">
                         <div class="content">
-                            <label for="item_name">Name</label>
+                            <label for="item_name">Name</label><br />
                             <input type="text" name="item_name" id="item_name" value="Eucalyptus" disabled="true"><br />
 
-                            <label for="item_price">Price</label>
-                            <input type="text" name="item_price" id="item_price " value="79,000"
-                                disabled="true"><br />
+                            <label for="item_price">Price</label><br />
+                            <input type="text" name="item_price" id="item_price " value="79,000" disabled="true"><br />
 
-                            <label for="item_category">Category</label>
+                            <label for="item_category">Category</label><br />
                             <select id="item_category" name="product_category_select" disabled="true">
                                 <option selected>꽃</option>
                                 <option>향수</option>
-                            </select>
-                            <label for="item_detail">Detail</label>
+                            </select><br />
+                            <label for="item_detail">Detail</label><br />
                             <textarea name="item_detail" id="item_detail" disabled="true">
 Eucalyptus 은 노란색으로 꽃잎이 이루어진 아름다운 꽃으로, 따뜻하고 밝은 느낌을 주어 기쁨과 희열의 감정을 불러일으킵니다.
 이국적인 느낌을 주는 Eucalyptus 을 실감할 수 있도록 제작되었습니다. 실내 인테리어, 선물용, 결혼식 등 다양한 장소와 상황에서 활용 가능합니다.
 또한, 향기가 가미된 제품도 함께 제공하여, 보다 생동감 있고 섬세한 느낌을 더해줍니다.
-Eucalyptus 로 인해 고객님의 삶이 더 행복하고 화사해지길 바랍니다.</textarea>
+Eucalyptus 로 인해 고객님의 삶이 더 행복하고 화사해지길 바랍니다.</textarea><br />
 
-                            <label for="item_file">File</label>
-                            <input type="text" name="item_file" id="item_file" value="eucalyptus.jpg"
-                                disabled="true"><br />
+                            <label for="item_file" class="labelLabel">File</label><br />
+                            <label for="item_file" class="fileUpload">UPLOAD</label>
+                            <input type="text" name="item_file_name" id="item_file_name" value="freesia.jpg"
+                                disabled="true">
+                            <input type="file" id="item_file" disabled="true">
                         </div>
                         <div class="content_btn">
                             <button type="button" class="btn btn-dark">수정</button>
