@@ -178,7 +178,8 @@ textarea[type=text] {
     table-layout: fixed;
   }
 
-  #customerService td.title {
+  #customerService td.title, 
+  #customerService th.category {
     width: auto;
     white-space: nowrap;
     overflow: hidden;
