@@ -72,7 +72,6 @@ $(function() {
     rangeVisitDate= visit_chart_data.slice(visit_chart_data.findIndex(e=>e.date.toDateString()==start._d.toDateString()),visit_chart_data.findIndex(e=>e.date.toDateString()==end._d.toDateString()));
     makeVisitChart.data.labels=rangeVisitDate.map(range=>range.date.toLocaleDateString());
     makeVisitChart.data.datasets[0].data=rangeVisitDate.map(range=>range.value);
-    console.log(makeVisitChart.data)
     makeVisitChart.update();
   });
 });

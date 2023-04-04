@@ -24,8 +24,7 @@ ponds.forEach((p,index)=>{
     if(error){
         console.log("Error!",error);
     }
-    reader(file.file,(err,res)=>{images[index]=res})
-    console.log(images)})
+    reader(file.file,(err,res)=>{images[index]=res})})
 })
 const textAreas = document.querySelectorAll('textarea');
 
