@@ -1,5 +1,6 @@
-input{
-    all:revert;
+input,
+button {
+    all: revert;
 }
 
 #shop table {
@@ -33,12 +34,40 @@ input{
 }
 
 #shop .shop-content .content {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
+    text-align: left;
     padding: 20px;
     background-color: white;
 }
+
+textarea {
+    width: 90%;
+    height: 100px;
+}
+
+.content.labelLabel {
+    display: block;
+}
+
+.content>.fileUpload {
+    display: inline-block;
+    padding: 0.5%;
+    background-color: rgb(216, 216, 216);
+    cursor: pointer;
+}
+
+.content input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+
+#shop .shop-content .content_btn {
+    text-align: right;
+    margin: 0 20px 10px 0;
+  }
 
 #shop .shop-content h1 {
     font-size: 17px;
@@ -50,12 +79,14 @@ input{
     font-size: 14px;
 }
 
-#shop .shop-content img{
+#shop .shop-content img {
     width: 150px;
 }
-#shop .shop-content .imgbox{
+
+#shop .shop-content .imgbox {
     height: 100%;
 }
+
 .pagination {
     display: flex;
     justify-content: center;
@@ -64,7 +95,7 @@ input{
 }
 
 .pagination ul {
-    display: flex;  
+    display: flex;
 }
 
 .pagination li {
@@ -91,7 +122,7 @@ input{
     color: #fff;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
     #shop table {
         table-layout: fixed;
     }
@@ -107,12 +138,15 @@ input{
     .addr {
         display: none;
     }
-    #shop .shop-content .content{
+
+    #shop .shop-content .content {
         display: block;
     }
-    .br_m{
+
+    .br_m {
         display: none;
     }
+
     .pagination ul {
         font-size: 70%;
     }
