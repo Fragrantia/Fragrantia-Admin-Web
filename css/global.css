@@ -15,6 +15,14 @@ a, li, div, span, button, p, h1 {
 *{
     box-sizing: border-box;
 }
+
+span.h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+    margin: 10px 0;
+  }
+
 @media all{
     .wrap{
         width:80%;
@@ -35,4 +43,7 @@ a, li, div, span, button, p, h1 {
         width: calc(100% - 20px); /*margin을 포함해서 100% 계산*/
         margin: 10px;
     }
+    /* span.h1 {
+        margin: 20px 50px;
+      } */
 }
