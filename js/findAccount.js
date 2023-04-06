@@ -3,7 +3,7 @@ $(function () {
         rules: {
             name: {
                 required: true,
-                minlength: 4,
+                minlength: 2,
                 maxlength: 7,
             },
             email: {
