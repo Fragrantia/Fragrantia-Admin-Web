@@ -19,7 +19,7 @@ $(function () {
         messages: {
             name: {
                 required: "이름을 입력해주세요",
-                minlength: "최소 4자 이상 입력해주세요",
+                minlength: "최소 2자 이상 입력해주세요",
                 maxlength: "최대 7자 이하로 입력해주세요",
             },
             email: {
