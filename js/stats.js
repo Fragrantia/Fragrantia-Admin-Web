@@ -69,7 +69,7 @@ $(function() {
       cancelLabel: '취소',
     }
   }, function(start, end) {
-    rangeVisitDate= visit_chart_data.slice(visit_chart_data.findIndex(e=>e.date.toDateString()==start._d.toDateString()),visit_chart_data.findIndex(e=>e.date.toDateString()==end._d.toDateString()));
+    rangeVisitDate= visit_chart_data.slice(visit_chart_data.findIndex(e=>e.date.toDateString()==start._d.toDateString()),visit_chart_data.findIndex(e=>e.date.toDateString()==end._d.toDateString())+1);
     makeVisitChart.data.labels=rangeVisitDate.map(range=>range.date.toLocaleDateString());
     makeVisitChart.data.datasets[0].data=rangeVisitDate.map(range=>range.value);
     makeVisitChart.update();
